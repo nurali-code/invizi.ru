@@ -1,0 +1,231 @@
+.card
+	@extend %flex-col
+	background: #f3f5f7
+	border-radius: 8px
+	padding: 14px
+	gap: 10px
+	text-align: center
+	align-items: center
+
+	&__badge
+		@extend %flex-ac
+		justify-content: flex-end
+		width: 100%
+		gap: 8px
+		font-size: 12px
+		font-weight: 600
+		color: #3a3a3a
+
+	&__flag
+		width: 20px
+		height: 12px
+		border-radius: 3px
+		background: linear-gradient(90deg, #1f9d55 0 33%, #ffffff 33% 66%, #e11d48 66% 100%)
+		border: 1px solid rgba(52, 52, 52, 0.2)
+
+	&__img
+		max-width: 80%
+		height: 181px
+		object-fit: contain
+		border-radius: 8px
+
+	&__title
+		margin: 0
+		font-size: 16px
+		line-height: 1.25
+		color: #0a2540
+		font-weight: 700
+		min-height: 32px
+		text-wrap: pretty
+		text-align: center
+		width: 100%
+
+	&__price
+		@extend %flex-col
+		@extend %flex-cc
+		gap: 8px
+		width: 100%
+
+		&--v2 .search_price_old
+			margin-top: 2px
+			width: auto
+
+		&--basic
+			gap: 4px
+
+			.search_price_old
+				width: auto
+				margin-top: 0
+
+	&__quick
+		font-size: 16px
+		color: #5c6d85
+		width: 100%
+		text-align: center
+		text-decoration: underline
+		margin-top: auto
+
+.search_price_plain
+	@extend %flex-col
+	@extend %flex-cc
+	display: inline-flex
+	gap: 4px
+	padding: 8px 14px 10px
+	min-width: 0
+	max-width: 100%
+	border-radius: 10px
+	background: #ffffff
+	border: 1px solid #dbe8fb
+
+	&__label
+		font-size: 11px
+		font-weight: 600
+		color: #5c6d85
+		line-height: 1.2
+
+	&__value
+		font-size: 13px
+		font-weight: 700
+		color: #0a2540
+		line-height: 1.2
+
+	&--accent
+		padding: 10px 20px
+		border-color: #0000001a
+
+		.search_price_plain__value
+			font-size: 16px
+			letter-spacing: 0.01em
+
+.search_price_promo_lite
+	@extend %flex-col
+	@extend %flex-cc
+	gap: 6px
+	width: 100%
+
+	.search_price_orange
+		min-width: 0
+
+	.search_price_old
+		width: auto
+		line-height: 1.2
+
+.search_price_line
+	font-size: 13px
+	font-weight: 700
+	color: #0a2540
+	line-height: 1.25
+
+	&--sale
+		color: #ff5c00
+
+.search_price_sale_row
+	@extend %flex-wrap
+	align-items: flex-start
+	justify-content: center
+	gap: 10px
+	width: 100%
+
+.search_price_orange
+	@extend %flex-cc
+	display: inline-flex
+	padding: 8px 12px
+	border-radius: 8px
+	background: var(--color-orange, #ff5c00)
+	color: #ffffff
+	font-size: 12px
+	font-weight: 700
+	line-height: 1.2
+	text-align: center
+
+/* Оранжево-красный ценник «Топ продаж» */
+.search_price_hit_block
+	@extend %flex-ac
+	justify-content: space-between
+	gap: 12px
+	padding: 10px 20px
+	min-height: 52px
+	border-radius: 8px
+	background: linear-gradient(235deg, #FB4310 27.76%, #BB0C0C 104.69%)
+	position: relative
+
+	font-size: 16px
+	font-weight: 400
+	color: #ffffff
+	line-height: 1.15
+	letter-spacing: 0.02em
+
+	&__label
+		font-size: 11px
+		font-weight: 500
+		color: rgba(255, 255, 255, 0.92)
+		line-height: 1.25
+
+	&__hit
+		@extend %flex-ac
+		justify-content: center
+		gap: 4px
+		flex-shrink: 0
+		position: absolute
+		left: 82%
+		top: -8px
+
+	.search_hit__text
+		color: #000000
+		font-size: 12px
+		line-height: 1.15
+		text-align: left
+
+.search_hit
+	@extend %flex-col
+	align-items: center
+	gap: 4px
+	min-width: 56px
+	.ic
+		--size: 25px
+
+	&__text
+		font-size: 10px
+		font-weight: 400
+		color: #5c6d85
+		line-height: 1.15
+		text-align: center
+		max-width: 64px
+
+.search_price_old
+	font-size: 11px
+	color: #9aa7b7
+	text-decoration: line-through
+	font-weight: 600
+	text-align: center
+	width: 100%
+
+.obj
+	padding: 24px
+	@extend %flex-col
+	@extend %flex-as
+	@extend %flex-je
+	color: white
+	position: relative
+	z-index: 0
+	max-width: 33%
+	aspect-ratio: 460/545
+	&__bg
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		border-radius: 10px
+
+	&__title
+		font-size: 20px
+		font-style: normal
+		font-weight: 700
+		line-height: 130%
+
+	@media screen and ( max-width: 767px )
+		padding: 20px
+		&__title
+			font-size: 16px

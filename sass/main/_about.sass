@@ -1,0 +1,311 @@
+
+.about
+	&__inner
+		@extend %flex-col
+
+	&__row
+		@extend %flex-ac
+		gap: 20px
+		width: 100%
+
+		&--reverse
+			flex-direction: row-reverse
+
+		&--cta
+			align-items: stretch
+
+	&__text
+		@extend %flex-col
+		gap: 30px
+		flex: 1
+		min-width: 0
+
+	.ic
+		--size: 49px
+
+	&__title
+		margin: 0
+		font-family: "Montserrat", sans-serif
+		font-weight: 600
+		font-size: 52px
+		line-height: 1.1
+		color: var(--textcolors-main, #0a2540)
+
+	&__desc
+		margin: 0
+		font-size: 22px
+		line-height: 1.4
+		color: var(--textcolors-light, #425466)
+
+		a
+			color: inherit
+			text-decoration: underline
+
+	&__list
+		@extend %flex-col
+		list-style: none
+		margin: 0
+		padding: 0
+		gap: 15px
+
+		li
+			position: relative
+			padding-left: 22px
+			font-size: 22px
+			line-height: 1.4
+			color: var(--textcolors-light, #425466)
+
+			&::before
+				content: ""
+				position: absolute
+				left: 0
+				top: 50%
+				margin-top: -5px
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				background: #637796
+
+	&__video
+		position: relative
+		display: block
+		flex: 1
+		min-width: 0
+		height: 441px
+		border-radius: 12px
+		overflow: hidden
+		cursor: pointer
+
+		&::after
+			content: ""
+			position: absolute
+			inset: 0
+			background: rgba(0, 0, 0, 0.2)
+			transition: background .25s ease
+
+		&:hover::after
+			background: rgba(0, 0, 0, 0.4)
+
+		.ic
+			--size: 65px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			z-index: 2
+			opacity: 0
+			transition: opacity .25s ease
+
+		&:hover .ic
+			opacity: 1
+
+	&__poster
+		position: absolute
+		inset: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+		display: block
+
+	@media (max-width: 1000px)
+		padding: 30px 0 50px
+		.ic 
+			margin-bottom: 2px
+
+		&__row, &__row--reverse
+			flex-direction: column
+			align-items: stretch
+			gap: 25px
+
+		&__title
+			font-size: 30px
+
+		&__desc, &__list li
+			font-size: 18px
+
+		&__video
+			height: 260px
+
+		&__text 
+			gap: 12px
+
+		&__desc
+			font-size: 16px
+
+	/* ---- CTA card (промо) ---- */
+	&-cta
+		position: relative
+		flex: 1
+		min-width: 0
+		border-radius: 12px
+		padding: 38px 38px 30px
+		color: #fff
+		background-color: #114AC3
+		background-image: url('../imgs/main/about-cta__bg.svg')
+		background-repeat: no-repeat
+		background-size: cover
+		overflow: hidden
+		@extend %flex-col
+		gap: 18px
+
+		&__title
+			margin: 0
+			font-family: "Inter", sans-serif
+			font-weight: 400
+			font-size: 32px
+			text-wrap: pretty
+			line-height: 1.25
+			color: #fff
+			b 
+				display: block
+
+		&__lead
+			margin: 0
+			font-size: 18px
+			color: rgba(255, 255, 255, 0.9)
+
+		&__tag
+			width: 140px
+			@extend %flex-cc
+			flex-shrink: 0
+			position: relative
+			height: 66px
+			background-color: #FB4310
+			background-repeat: no-repeat
+			background-size: cover
+			background-image: url('../imgs/main/sale__bg.svg')
+			background-position: center center
+			border-radius: 8px
+			outline: 4px solid rgba(255, 255, 255, 0.17)
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
+
+			text-align: center
+			font-weight: 700
+			font-size: 34px
+			text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+			color: #fff
+
+			position: absolute
+			top: 50%
+			right: 105%
+			transform: translate(0, -50%) rotate(-5deg)
+
+		&__offer
+			position: relative
+			z-index: 0
+			@extend %flex-ac
+			margin: auto 0 0 110px
+			gap: 18px
+
+			&-text
+				@extend %flex-col
+				gap: 4px
+
+			&-title
+				margin: 0
+				font-family: "Inter", sans-serif
+				font-weight: 600
+				font-size: 22px
+				line-height: 1.25
+				color: #fff
+
+			&-sub
+				@extend %flex-ac
+				flex-wrap: wrap
+				margin: 0
+				gap: 8px
+				font-size: 20px
+				color: rgba(255, 255, 255, 0.92)
+
+		&__socials
+			@extend %flex-ac
+			gap: 10px
+			margin-left: 4px
+
+		&__social
+			@extend %flex-cc
+			color: #fff
+
+			.ic
+				--size: 38px
+
+		@media (max-width: 767px)
+			gap: 12px
+			padding: 24px
+			text-align: center
+
+			&__tag
+				padding-top: 2px
+				width: 180px
+				height: 60px
+				position: static
+				transform: none
+				margin: 4px auto
+
+			&__title
+				font-size: 24px
+
+			&__offer
+				gap: 16px
+				flex-wrap: wrap
+				margin: 0 auto
+				&-title 
+					font-size: 18px
+
+				&-text
+					width: 100%
+					margin: 0 auto
+
+				&-sub
+					font-size: 16px
+					text-align: center
+					justify-content: center
+					gap: 0
+
+			&__socials
+				width: 100%
+				margin: 17px auto 0
+
+			&__social
+				flex: 1
+				height: 71px
+
+				&.--tg
+					border-radius: 8px
+					border: 1px solid rgba(255, 255, 255, 0.12)
+					background: #27A6E5
+
+				&.--max
+					border-radius: 8px
+					border: 1px solid rgba(255, 255, 255, 0.12)
+					background: radial-gradient(67.06% 99.31% at 30.77% 121.43%, #52A1F6 0%, rgba(82, 161, 246, 0.00) 100%), linear-gradient(98deg, #3447F1 10.49%, #9047D3 100%)
+
+	/* ---- Form ---- */
+	&-form
+		@extend %flex-col
+		flex: 1
+		min-width: 0
+		gap: 20px
+		padding: 52px 60px
+		background: #F2F4F6
+		border-radius: 12px
+		&>*
+			width: 100%
+
+		.btn
+			font-size: 20px
+
+		@media (max-width: 767px)
+			padding: 12px
+			gap: 14px
+
+			&__field
+				height: 54px
+				padding: 0 16px
+
+				input
+					font-size: 16px
+
+			&__submit
+				height: 56px
+				font-size: 17px

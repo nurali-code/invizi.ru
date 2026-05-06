@@ -1,0 +1,26 @@
+.main_objects
+
+    .container
+        @extend %flex-col
+
+    &__slider
+
+    .slick
+        &-slide
+            max-width: 100%
+
+    @media screen and ( min-width: 1700px )
+        .slick
+            &-prev
+                left: calc( -25px - var(--arrow-size) )
+
+            &-next
+                right: calc( -25px - var(--arrow-size) )
+
+    @media screen and ( min-width: 700px )
+        .slick
+            &-arrow
+
+    @media (max-width: 767px)
+        &__slider
+            @extend %mob-slick-arrows

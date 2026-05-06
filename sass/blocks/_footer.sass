@@ -1,0 +1,344 @@
+/* ========== Footer ========== */
+.site-footer
+	margin-top: 64px
+	background: #051C38
+	color: white
+
+	a
+		color: white
+		font-size: 13px
+		font-weight: 400
+
+.footer-top
+	display: grid
+	/*grid-template-columns: repeat(4, minmax(0, 1fr));*/
+	grid-template-columns: auto repeat(3, 1fr)
+	gap: 36px var(--pad-x-lg)
+	padding: 36px 0 28px
+
+.footer-logo
+	display: flex
+	flex-direction: column
+	gap: 4px
+
+	&-line1
+		font-size: 22px
+		font-weight: 800
+		letter-spacing: 0.03em
+		color: #fff
+
+	&-line2
+		font-size: 18px
+		font-weight: 800
+		letter-spacing: 0.12em
+		color: #b8d7ff
+
+.footer-col-contacts
+	display: flex
+	flex-direction: column
+	gap: 14px
+
+.footer-contact
+	&-line
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		gap: 8px 10px
+		font-size: 16px
+		font-weight: 600
+		color: #fff
+
+	&-text
+		text-decoration: underline
+		text-underline-offset: 3px
+		font-weight: 600
+		font-size: 16px
+
+	&-svg
+		display: flex
+		color: var(--color-accent)
+		flex-shrink: 0
+
+	&-msgs
+		display: inline-flex
+		gap: 6px
+		margin-left: 4px
+
+.footer-msg
+	width: 26px
+	height: 26px
+	border-radius: 50%
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	font-size: 9px
+	font-weight: 800
+	color: #fff
+
+	&--tg
+		background: #229ed9
+
+	&--vb
+		background: #7360f2
+
+.footer-work-text
+	margin: 0
+	font-size: 15px
+	line-height: 1.5
+	font-size: 13px
+
+.socials
+	display: flex
+	flex-wrap: wrap
+	gap: 8px
+	margin-top: 18px
+
+.social
+	width: 32px
+	height: 32px
+	border-radius: 50%
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	font-size: 10px
+	font-weight: 800
+	text-transform: uppercase
+
+	&--ok
+		background: #ee8208
+	&--fb
+		background: #1877f2
+	&--tt
+		background: #000
+	&--pt
+		background: #bd081c
+	&--rt
+		background: #001f50
+	&--vk
+		background: #0077ff
+
+.footer-region
+	&-head
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		gap: 10px
+		margin-bottom: 12px
+		font-weight: 700
+		font-size: 15px
+
+	&-label
+		color: #fff
+
+	&-select
+		appearance: none
+		border: 1px solid rgba(255, 255, 255, 0.45)
+		border-radius: 8px
+		background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M3 4.5 6 8l3-3.5'/%3E%3C/svg%3E") no-repeat right 10px center
+		color: #fff
+		font: inherit
+		font-size: 13px
+		font-weight: 600
+		padding: 8px 34px 8px 12px
+		cursor: pointer
+		min-width: 130px
+
+	&-dropdown
+		position: relative
+
+		&[open] .footer-region-menu
+			display: block
+
+		.footer-region-toggle:focus-visible
+			outline: 2px solid var(--color-accent)
+			outline-offset: 2px
+
+	&-toggle
+		list-style: none
+		cursor: pointer
+		appearance: none
+		border: 1px solid #105BFB
+		border-radius: 8px
+		background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M3 4.5 6 8l3-3.5'/%3E%3C/svg%3E") no-repeat right 10px center
+		color: #fff
+		font: inherit
+		font-size: 13px
+		font-weight: 600
+		padding: 8px 34px 8px 12px
+		min-width: 130px
+		display: inline-block
+
+		&::-webkit-details-marker
+			display: none
+
+	&-menu
+		position: absolute
+		top: calc(100% + 8px)
+		left: 0
+		margin: 0
+		padding: 8px
+		list-style: none
+		min-width: 190px
+		display: none
+		z-index: 20
+		background: #062351
+		border: 1px solid rgba(255, 255, 255, 0.18)
+		border-radius: 10px
+
+		&__link
+			display: block
+			padding: 8px 10px
+			border-radius: 8px
+			color: #fff
+			text-decoration: none
+			font-size: 13px
+			font-weight: 600
+
+			&:hover
+				background: rgba(255, 255, 255, 0.08)
+
+			&[aria-current="page"]
+				background: rgba(255, 255, 255, 0.12)
+
+.header-region
+	&-select
+		appearance: none
+		border: 1px solid rgba(255, 255, 255, 0.45)
+		border-radius: 8px
+		background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M3 4.5 6 8l3-3.5'/%3E%3C/svg%3E") no-repeat right 10px center
+		color: #fff
+		font: inherit
+		font-size: 13px
+		font-weight: 600
+		padding: 8px 34px 8px 12px
+		cursor: pointer
+		min-width: 130px
+
+	&-dropdown
+		position: relative
+
+		&[open] .header-region-menu
+			display: block
+
+		.header-region-toggle:focus-visible
+			outline: 2px solid var(--color-accent)
+			outline-offset: 2px
+
+	&-toggle
+		list-style: none
+		cursor: pointer
+		appearance: none
+		border: 1px solid #105BFB
+		border-radius: 8px
+		background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000000' d='M3 4.5 6 8l3-3.5'/%3E%3C/svg%3E") no-repeat right 10px center
+		color: #000000
+		font: inherit
+		font-size: 13px
+		font-weight: 600
+		padding: 8px 34px 8px 12px
+		min-width: 130px
+		display: inline-block
+
+		&::-webkit-details-marker
+			display: none
+
+	&-menu
+		position: absolute
+		top: calc(100% + 8px)
+		left: 0
+		margin: 0
+		padding: 8px
+		list-style: none
+		min-width: 190px
+		display: none
+		z-index: 20
+		background: #e6f2ff
+		border: 1px solid rgba(255, 255, 255, 0.18)
+		border-radius: 10px
+
+		&__link
+			display: block
+			padding: 8px 10px
+			border-radius: 8px
+			color: #000000
+			text-decoration: none
+			font-size: 13px
+			font-weight: 600
+
+			&:hover
+				background: rgba(255, 255, 255, 0.08)
+
+			&[aria-current="page"]
+				background: rgba(255, 255, 255, 0.12)
+
+.footer-address
+	margin: 0
+	font-size: 14px
+	line-height: 1.5
+	font-size: 13px
+
+.footer-bottom
+	border-top: 1px solid rgba(255, 255, 255, 0.14)
+	padding: 18px 0 28px
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	gap: 20px
+
+.footer-copy
+	margin: 0
+	font-size: 13px
+	line-height: 1.5
+	max-width: 720px
+
+	a
+		text-decoration: underline
+		text-underline-offset: 2px
+
+.footer-privacy
+	font-size: 13px
+	color: var(--color-footer-muted)
+	text-decoration: underline
+	text-underline-offset: 3px
+	white-space: nowrap
+
+/* Footer tablet */
+@media (max-width: 1023px)
+	.footer-top
+		grid-template-columns: repeat(2, minmax(0, 1fr))
+		gap: 28px 24px
+	.footer-col-logo
+		grid-column: 1 / -1
+
+/* Footer mobile: faq-mob — по центру, больше воздуха */
+@media (max-width: 767px)
+	.site-footer
+		margin-top: 48px
+	.footer-top
+		grid-template-columns: 1fr
+		text-align: center
+		padding: 32px 0 24px
+		gap: 26px
+	.footer-logo
+		align-items: center
+	.footer-col-contacts
+		align-items: center
+	.footer-contact-line
+		justify-content: center
+	.footer-work-text
+		text-align: center
+	.socials
+		justify-content: center
+	.footer-region-head
+		justify-content: center
+	.footer-address
+		text-align: center
+	.footer-bottom
+		flex-direction: column
+		align-items: center
+		text-align: center
+		padding-bottom: 32px
+	.footer-copy
+		max-width: none
+	.footer-privacy
+		white-space: normal

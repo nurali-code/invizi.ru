@@ -1,0 +1,79 @@
+.main_faq
+    .container
+        @extend %flex-col
+
+    @media (max-width: 900px)
+        padding: 60px 0
+
+    
+
+    &__grid
+        @extend %cols
+        --col: 2
+        gap: 30px 13px
+
+        @media (max-width: 900px)
+            --col: 1
+            gap: 20px
+
+    &__item
+        @extend %flex-col
+        gap: 20px
+
+    .ic 
+        transition: all 0.3s ease
+
+    &__question
+        border-radius: 10px
+        border: 1px solid #2d68ff
+        cursor: pointer
+        padding: 0 22px
+        min-height: 87px
+        @extend %flex-col 
+        @extend %flex-cc 
+
+
+    &__heading
+        width: 100%
+        @extend %flex-ac
+        @extend %flex-jb
+        gap: 20px
+        padding: 15px 0
+
+        font-size: 20px
+        font-weight: 400
+        line-height: 1.4
+        color: #0a2540
+        margin: 0
+
+        @media (max-width: 600px)
+            font-size: 16px
+
+        span
+            text-wrap: balance
+
+    &__answer
+        display: none
+        padding-bottom: 15px
+
+    &-img 
+        aspect-ratio: 700/300
+        border-radius: 10px
+
+    @media (max-width: 700px)
+        padding: 40px 0
+        .container
+            gap: 15px
+
+        &__question
+            min-height: 52px
+            padding: 0 17px
+
+        &__heading 
+            padding: 10px 0
+
+        &__item 
+            gap: 12px
+
+        &__grid
+            gap: 15px

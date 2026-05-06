@@ -1,0 +1,63 @@
+.cta-form
+    background: #0C43B9
+    color: white
+    margin: var(--section-pad-y) 0
+
+    @media (max-width: 900px)
+        padding: 60px 0
+
+    @media (max-width: 600px)
+        padding: 40px 0
+
+    &__head
+        gap: 12px
+        @extend %flex-col
+        margin-bottom: 42px
+
+        @media (max-width: 600px)
+            margin-bottom: 30px
+
+    &__title
+        font-size: 38px
+        font-weight: 700
+        line-height: 1.2
+        margin: 0 
+
+        @media (max-width: 900px)
+            font-size: 28px
+
+        @media (max-width: 600px)
+            font-size: 24px
+
+        span
+            font-weight: 400
+
+    &__text
+        font-size: 18px
+        line-height: 1.5
+        margin: 0
+
+        a
+            font-weight: 700
+
+        @media (max-width: 600px)
+            font-size: 16px
+
+    &__row 
+        @extend %cols 
+        --col: 3
+
+        @media (max-width: 600px)
+            flex-direction: column
+            gap: 12px
+
+    &__form
+        @extend %flex-col
+        gap: 20px
+
+        .btn 
+            width: 100%
+
+        .checkbox
+            width: fit-content
+            margin: 0 auto

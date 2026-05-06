@@ -1,0 +1,272 @@
+.headline
+    width: 100%
+    @extend %flex-wrap
+    @extend %flex-ae
+    gap: 26px
+    &--start
+        @extend %flex-as
+
+    &-title
+        color: var(--textcolors-main, #0A2540)
+        font-family: "Montserrat", sans-serif
+        font-size: 60px
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+        margin: 0
+        flex: 1
+
+    &-line
+        @extend %flex-ac
+        gap: 26px
+        flex: 1
+        &::after
+            content: ""
+            display: block
+            flex: 1
+            width: auto
+            height: 1px
+            background-color: #C9C9C9
+
+    .btn
+        min-width: 340px
+
+    @media (max-width: 1200px)
+        &-title
+            font-size: 50px
+
+    @media (max-width: 1024px)
+        &-title
+            font-size: 42px
+
+    @media (max-width: 767px)
+        gap: 16px
+        &-title
+            font-size: 30px
+
+.btn
+    text-align: center
+    width: fit-content
+    @extend %flex-cc
+    gap: 8px
+    padding: 12px 22px
+    border-radius: 8px
+    border: none
+    font-family: inherit
+    font-weight: 700
+    font-size: 15px
+    cursor: pointer
+    text-decoration: none
+    transition: all 0.3s ease
+    &:active 
+        transform: scale(.98)
+
+    &--sm
+        padding: 9px 14px
+        font-size: 14px
+
+    &--outline
+        font-family: 'Montserrat', sans-serif
+        font-style: normal
+
+        font-weight: 400
+        line-height: normal
+        gap: 13px
+        background: transparent
+        color: var(--color-accent)
+        border: 1.329px solid var(--color-accent)
+
+        &:hover
+            background: var(--color-pill-bg)
+
+    &--lg
+        font-size: 32px
+        min-height: 91px
+        border-radius: 14px
+        .ic
+            --size: 38px
+
+    &--md
+        font-size: 20px
+        min-height: 71px
+
+    &--wide
+        width: 100%
+
+    &--primary
+        background: linear-gradient(98deg, #105BFB 14.41%, #093695 132.49%)
+        color: #fff
+
+        &:hover
+            opacity: .8
+
+    &--orange,
+    &--primary
+        overflow: hidden
+        position: relative
+        z-index: 0
+        &::before
+            width: 90%
+            height: 114px
+            content: ''
+            display: block
+            border-radius: 441px
+            background: radial-gradient(50% 50% at 50% 50%, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)
+            mix-blend-mode: soft-light
+            position: absolute
+            z-index: -1
+            right: 5%
+            top: -55px
+
+    &--orange
+        background: linear-gradient(0deg, #FB4310 0%, #FF6C44 100%)
+        color: #fff
+        &::before
+            opacity: .5
+
+        &:hover
+            opacity: .8
+
+    &--price
+        background: var(--color-accent)
+        color: #fff
+        font-size: 17px
+        padding: 14px 26px
+        border-radius: 8px
+
+        &:hover
+            background: var(--color-accent-dark)
+
+    &--blue
+        background: var(--color-accent)
+        color: white
+        box-shadow: 0 3.123px 0 0 #C3D1FF
+        &:hover
+            background: var(--color-accent-dark)
+
+    &--buy
+        width: 100%
+        gap: 8px
+        padding: 15px
+        border-radius: 7px
+        background: #1a66ff
+        color: #fff
+        font-size: 18px
+        font-weight: 400
+
+        &:hover
+            background: var(--color-accent-dark)
+
+        .ic
+            --size: 18px
+
+    &--icon
+        .ic
+            --size: 24px
+            fill: white
+
+    &--white
+        background-color: white
+        color: #0A2540
+
+    @media screen and ( max-width: 768px )
+        width: 100%
+        min-width: 100% !important
+        &--lg
+            font-size: 20px
+            min-height: 45px
+            border-radius: 8px
+            .ic
+                --size: 24px
+
+input, select, textarea
+    width: 100%
+    display: block
+    font-size: 18px
+    font-style: normal
+    font-weight: 400
+    min-height: 65px
+    padding: 10px 24px
+    border-radius: 8px
+    border: 1px solid rgba(0, 0, 0, 0.10)
+    background-color: #FFF
+    &::placeholder
+        color: #425466
+
+textarea
+    resize: none
+    padding-top: 24px
+
+select
+    appearance: none
+    background-repeat: no-repeat
+    background-position: right 24px center
+
+.checkbox
+    --icon-size: 22px
+    @extend %flex-ac
+    gap: 12px
+    font-size: 14px
+    line-height: 1.5
+    cursor: pointer
+    position: relative
+    z-index: 0
+    padding-left: calc(var(--icon-size) + 12px)
+
+    label
+        cursor: pointer
+        min-height: var(--icon-size)
+        &::before
+            position: absolute
+            top: 0
+            left: 0
+            content: ''
+            display: block
+            width: var(--icon-size)
+            height: var(--icon-size)
+            border: 1px solid rgba(0, 0, 0, 0.10)
+            border-radius: 4px
+            background-color: #FFF
+            background-size: 75% auto
+            background-repeat: no-repeat
+            background-position: center
+
+    input[type="checkbox"]
+        width: 100%
+        height: 100%
+        min-height: var(--icon-size)
+        margin: 0
+        accent-color: var(--color-accent, #105bfb)
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        &:checked~label
+            &::before
+                background-image: url('../imgs/sprite/check.svg')
+
+.inp_wrap
+    min-height: 65px
+    @extend %flex-ac
+    overflow: hidden
+    border-radius: 8px
+    border: 1px solid rgba(0, 0, 0, 0.10)
+    background-color: #FFF
+    &>*
+        border: none
+        padding: 10px
+        outline: none
+        border: none
+        &:last-child
+            padding-left: 10px
+
+    &-child
+        min-height: 40px
+        border-radius: 0
+        border-right: 1px solid rgba(0, 0, 0, 0.10)
+        padding-left: 24px
+        background-image: none
+        width: fit-content
+
+section
+    padding: var(--section-pad-y) 0

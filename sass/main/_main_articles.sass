@@ -1,0 +1,55 @@
+.main_articles
+    .container
+        @extend %flex-col
+
+    &-list
+        @extend %cols
+        --col: 2
+
+    &__item
+        @extend %flex-col
+        gap: 12px
+        &:last-child
+            width: 100%
+            .main_articles__img
+                aspect-ratio: 1420/250
+
+    &__img
+        width: 100%
+        border-radius: 10px
+        aspect-ratio: 700/370
+
+    &__date
+        padding: 2px 12px
+        display: block
+        width: fit-content
+        color: var(--color-accent)
+        border: 1px solid currentColor
+        border-radius: 3px
+
+    &__title
+        color: var(--textcolors-main, #0A2540)
+        font-family: 'Montserrat', sans-serif
+        font-size: 24px
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+
+    &__text
+        color: #425466
+        font-family: Inter
+        font-size: 20px
+        font-style: normal
+        font-weight: 400
+        line-height: 140%
+
+    @media screen and ( max-width: 700px )
+        .headline-line
+            display: inline
+            &::after
+                display: none
+        &__list 
+            --gap: 16px
+
+        &__img
+            aspect-ratio: 343 / 182 !important

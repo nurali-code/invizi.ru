@@ -1,0 +1,498 @@
+/* ========== Каталог и мобильные меню (menu-catalog / menu-mob) ========== */
+body.menu-scroll-lock
+	overflow: hidden
+
+.site-header
+	position: relative
+	z-index: 400
+
+.header-backdrop
+	position: fixed
+	inset: 0
+	z-index: 350
+	background: rgba(5, 22, 46, 0.35)
+	border: 0
+	padding: 0
+	margin: 0
+	cursor: default
+
+.catalog-mega
+	position: absolute
+	left: 0
+	right: 0
+	top: 100%
+	z-index: 360
+	border-radius: 10px
+	overflow: hidden
+	opacity: 0
+	visibility: hidden
+	transition: opacity 0.2s ease, visibility 0.2s ease
+
+	&.is-open
+		opacity: 1
+		visibility: visible
+
+	&__inner
+		display: flex
+		grid-template-columns: minmax(200px, 240px) minmax(220px, 1fr) minmax(280px, 380px)
+		gap: 0
+
+	&__col--cats
+		background: #1d63ed
+		color: #fff
+		overflow-y: auto
+		padding: 12px 0
+		position: relative
+
+	&__cat-list
+		list-style: none
+		margin: 0
+		padding: 0
+
+		li
+			margin: 0
+
+	&__cat
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 8px
+		padding: 12px 18px
+		border: 0
+		background: transparent
+		color: #fff
+		font: inherit
+		font-size: 15px
+		font-weight: 600
+		text-align: left
+		cursor: pointer
+		transition: background 0.12s ease
+
+		&:hover
+			background: rgba(255, 255, 255, 0.08)
+
+		&.is-active
+			background: rgba(255, 255, 255, 0.12)
+
+		/* Иконка только у пунктов с подменю */
+		&.has-submenu
+			padding-left: 28px
+
+			&::before
+				content: "›"
+				position: absolute
+				left: 10px
+				font-size: 16px
+				font-weight: 400
+				transition: transform 0.2s ease
+
+			&:hover::before, &.is-active::before
+				content: "›"
+				transform: rotate(90deg)
+
+	&__col--subs
+		background: #fff
+		overflow-y: auto
+
+		> div
+			padding: 20px 20px 24px
+			border-left: 1px solid #e8eef7
+			border-right: 1px solid #e8eef7
+
+	&__subs-head
+		margin: 0 0 14px
+		font-size: 17px
+		font-weight: 800
+		color: #1d63ed
+
+	&__subs-list
+		list-style: none
+		margin: 0
+		padding: 0
+
+		li
+			margin: 10px 0
+
+		a
+			display: block
+			padding: 10px 12px 10px 14px
+			border-left: 3px solid #9BA3AE
+			font-size: 15px
+			font-weight: 500
+			color: #5c6d85
+			text-decoration: none
+
+			&:hover
+				border-left-color: #1a66ff
+				color: var(--color-text)
+
+			&.is-active
+				border-left-color: #1a66ff
+				color: var(--color-text)
+				font-weight: 700
+
+	&__col--promo
+		padding: 16px
+		overflow-y: auto
+		background: #f6f8fc
+
+	&__promo-grid
+		display: flex
+		flex-direction: column
+		gap: 14px
+		height: 100%
+
+.catalog-promo-card
+	display: flex
+	flex-direction: column
+	border-radius: 12px
+	overflow: hidden
+	background: #fff
+	box-shadow: 0 6px 20px rgba(5, 22, 46, 0.08)
+	text-decoration: none
+	color: inherit
+
+	&__img img
+		width: 100%
+		height: auto
+		display: block
+
+	&__cap
+		padding: 12px 14px
+		font-size: 14px
+		font-weight: 700
+		color: var(--color-text)
+
+	&__title
+		font-size: 14px
+		font-weight: 700
+		line-height: 1.45
+
+	&--accent
+		background: linear-gradient(160deg, #2b7aff 0%, #1d63ed 100%)
+		color: #fff
+		padding: 16px
+		gap: 12px
+		align-items: flex-start
+
+		.catalog-promo-card__product img
+			max-width: 200px
+			border-radius: 8px
+
+		.catalog-promo-card__btn
+			margin-top: auto
+			align-self: stretch
+			text-align: center
+
+	.btn--light
+		background: #fff
+		color: #1d63ed
+		border-radius: 8px
+		padding: 10px 16px
+		font-size: 14px
+		font-weight: 700
+
+		&:hover
+			background: #f0f4ff
+@media (max-width: 1100px)
+	.catalog-mega__inner
+		grid-template-columns: 200px 1fr minmax(240px, 300px)
+	.header-location
+		display: none
+@media (max-width: 900px)
+	.catalog-mega__inner
+		grid-template-columns: 180px 1fr
+	.catalog-mega__col--promo
+		display: none
+@media (max-width: 767px)
+	.catalog-mega, .header-backdrop
+		display: none !important
+/* Мобильные выезжающие панели */
+.mobile-drawer
+	max-height: calc(100vh - 120px)
+	overflow: auto
+	background: #fff
+	box-shadow: 0 16px 40px rgba(5, 22, 46, 0.15)
+	border-radius: 0 0 12px 12px
+
+	&--nav .mobile-drawer__scroll
+		max-height: calc(100vh - 130px)
+		overflow-y: auto
+		padding: 8px var(--pad-x) 24px
+		-webkit-overflow-scrolling: touch
+
+	&__section-title
+		margin: 0 0 8px
+		font-size: 22px
+		font-weight: 400
+		color: #000
+		text-align: center
+
+		span
+			margin-right: 6px
+
+	&--catalog
+		background: transparent
+		box-shadow: none
+		border-radius: 0
+		max-height: none
+
+.mobile-nav-list
+	display: flex
+	flex-direction: column
+	gap: 0
+
+	&__link
+		display: block
+		padding: 7px 10px
+		border-left: 3px solid #e4e9f2
+		font-size: 14px
+		font-weight: 600
+		color: var(--color-text)
+		text-decoration: none
+		transition: border-color 0.12s ease, font-weight 0.12s ease
+		margin: 5px 0
+
+		&:hover
+			border-left-color: #9db8f0
+
+		&.is-active
+			border-left-color: var(--color-accent-mobile)
+			font-weight: 800
+
+.mobile-catalog-panel
+	background: linear-gradient(180deg, #1a66ff 0%, #0d52e0 100%)
+	color: #fff
+	border-radius: 0 0 12px 12px
+	overflow: hidden
+	display: flex
+	flex-direction: column
+	margin-bottom: 20px
+
+	&__head
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 12px
+		padding: 14px var(--pad-x)
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+		flex-shrink: 0
+
+	&__burger
+		width: 18px
+		height: 14px
+		border-top: 2px solid #fff
+		border-bottom: 2px solid #fff
+		position: relative
+		flex-shrink: 0
+
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			border-top: 2px solid #fff
+
+	&__title
+		flex: 1
+		text-align: center
+		font-size: 18px
+		font-weight: 800
+
+	&__collapse
+		flex-shrink: 0
+		width: 44px
+		height: 44px
+		margin: -8px -8px -8px 0
+		border: 0
+		background: transparent
+		color: #fff
+		font-size: 22px
+		line-height: 1
+		cursor: pointer
+		border-radius: 8px
+
+		&:hover
+			background: rgba(255, 255, 255, 0.12)
+
+	&__body
+		overflow-y: auto
+		padding: 8px var(--pad-x) 20px
+		-webkit-overflow-scrolling: touch
+
+.mobile-catalog-acc
+	&__summary
+		list-style: none
+		cursor: pointer
+		padding: 14px 8px 14px 4px
+		font-size: 16px
+		font-weight: 700
+
+		> span
+			text-decoration: underline
+			text-underline-offset: 4px
+
+		&::-webkit-details-marker
+			display: none
+
+	&__list
+		list-style: none
+		margin: 0
+		padding: 0 0 12px 18px
+
+		li
+			margin: 0
+
+		a
+			display: block
+			padding: 7px 10px
+			border-left: 3px solid rgba(255, 255, 255, 0.35)
+			font-size: 14px
+			font-weight: 600
+			letter-spacing: 0.02em
+			text-transform: uppercase
+			color: rgba(255, 255, 255, 0.95)
+			text-decoration: none
+			margin: 5px 0
+
+			&:hover
+				border-left-color: rgba(255, 255, 255, 0.7)
+
+			&.is-active
+				border-left-color: #fff
+				border-left-width: 4px
+				padding-left: 13px
+				font-weight: 800
+
+.catF
+	display: flex
+	border-radius: 10px
+	overflow: hidden
+
+.catalog-btn--mobile.catalog-btn--open .catalog-btn-arrow
+	display: inline-block
+	transform: rotate(-90deg)
+
+.foo-cont
+	display: flex
+	flex-direction: column
+	justify-content: space-evenly
+	height: 100%
+
+.brand svg
+	max-height: 81px
+
+.footer-privacy
+	text-decoration: none
+
+@media (min-width: 768px)
+	.mobile-drawer
+		display: none !important
+
+@media (max-width: 767px)
+	.foo-cont
+		line-height: 1.8
+		min-height: 130px
+
+.top-dop-menu
+	position: absolute
+	top: 10px
+	right: -80px
+	background: white
+	padding: 10px 20px
+	border-radius: 12px
+	visibility: hidden
+	opacity: 0
+	transition: visibility 0.2s, opacity 0.2s
+	z-index: 999
+
+	&.show
+		visibility: visible
+		opacity: 1
+
+	li
+		list-style: none
+		padding: 3px 10px
+		border-left: 3px solid #9BA3AE
+		margin: 10px 0
+
+		&:hover
+			border-left: 3px solid #1a66ff
+
+#mobile-catalog-drawer
+	display1: block
+	position: relative
+
+.header-mobile-catalog-wrap
+	margin: 0
+
+.catBody, #mobile-nav-drawer
+	display: none
+
+#mobile-nav-drawer
+	/*padding: 8px var(--pad-x) 24px;*/
+	padding: 0px 24px
+
+#content
+	padding: 8px var(--pad-x) 24px
+
+.page_title
+	font-weight: 700
+
+.page_content.jobs
+	display: grid
+	gap: 15px
+	width: 100%
+	max-width: 100%
+	grid-template-columns: repeat(3, 1fr)
+
+@media (max-width: 767px)
+	.page_content.jobs
+		grid-template-columns: 1fr
+	.job_time
+		display: none
+
+.jobs .job_el
+	position: relative
+	border-radius: 10px
+	overflow: hidden
+	display: block
+	cursor: pointer
+
+	img, svg
+		max-width: 100%
+		height: auto
+		display: block
+		margin: 0 auto
+
+	.title_el
+		color: white
+		position: absolute
+		z-index: 999
+		bottom: 0
+		padding: 15px
+
+.gr
+	background: linear-gradient(rgb(5 22 46 / 0%), #105bfbeb)
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+
+.show-more-link
+	display: block
+	width: 100%
+	background-color: #F6F6F6
+	color: #000000
+	text-align: center
+	text-decoration: none
+	padding: 12px 0
+	box-sizing: border-box
+	transition: background-color 0.2s ease
+	margin-top: 20px
+	font-weight: 500
+	border-radius: 8px

@@ -1,0 +1,64 @@
+.main_brands
+    .container
+        @extend %flex-col
+
+    &__slider
+        flex: 1
+        min-width: 0
+        &-wrap
+            gap: 20px
+            @extend %flex-ac
+
+    .slick
+        &-arrow
+            position: static
+            transform: none
+
+    &__slide
+        padding: 0 24px
+        border-right: 1px solid rgba(0, 0, 0, 0.12)
+        display: flex !important
+        align-items: center
+        justify-content: center
+        height: 110px
+
+        &:last-child
+            border-right: none
+
+        img
+            max-height: 80px
+            width: auto
+            max-width: 100%
+            object-fit: contain
+
+        &:not(.slick-active)
+            opacity: 0
+
+    @media (max-width: 767px)
+        &__slide
+            padding: 0 16px
+            height: 80px
+
+            img
+                max-height: 56px
+
+        &__slider
+            flex: none
+            order: 1
+            &-wrap
+                justify-content: center
+                flex-wrap: wrap
+
+        &__slide 
+            border: none
+            img 
+                height: 90%
+                max-height: unset
+
+
+        .slick
+            &-slide 
+                &:not(.slick-active)
+                    opacity: 1
+            &-arrow 
+                order: 2

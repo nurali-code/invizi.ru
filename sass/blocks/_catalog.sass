@@ -1,0 +1,397 @@
+/* ========== Каталог / поиск (типовая сетка): стили только внутри .catalog ========== */
+.page_content.catalog
+	padding-bottom: 44px
+
+.catalog
+	.search_layout
+		display: grid
+		grid-template-columns: 260px 1fr
+		gap: 22px
+		align-items: start
+
+	.search_sidebar
+		/*position: sticky;
+			top: 16px;*/
+
+	.search_filter
+		background: #ffffff
+		border: 1px solid #e6e8ec
+		border-radius: 12px
+		padding: 14px 14px 12px
+		margin-bottom: 20px
+
+		&--popular
+			display: none
+
+		&--cats .search_filter__option.is-active
+			color: #1a66ff
+			font-weight: 800
+
+		&__head
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+		&__title
+			font-size: 13px
+			font-weight: 700
+			color: #0a2540
+
+		&__head_icon
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			line-height: 0
+
+		&__group
+			padding: 10px 0
+			list-style: none
+
+			&:last-of-type
+				border-bottom: 0
+
+			&[open]
+				.search_filter__chev svg
+					transform: rotate(-90deg)
+				.search_filter__summary
+					color: #105BFB
+				.search_filter__chev svg path
+					fill: #105BFB
+
+			summary::-moz-list-bullet
+				list-style: none
+
+		&__summary
+			width: 100%
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			gap: 10px
+			border: 0
+			background: transparent
+			padding: 0
+			padding-inline-start: 0
+			font: inherit
+			font-size: 12px
+			font-weight: 600
+			color: #0a2540
+			cursor: pointer
+			text-align: left
+			list-style: none
+			list-style-type: none
+
+			&::-webkit-details-marker
+				display: none
+
+			&::marker
+				content: ""
+				font-size: 0
+
+		&__chev
+			flex-shrink: 0
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			line-height: 0
+			transition: transform 0.2s ease
+			order: -1
+			/* Стрелка всегда слева от текста */
+
+			svg
+				display: block
+
+		&__body
+			margin-top: 10px
+
+		&__options
+			margin: 0
+			padding: 0
+			list-style: none
+			display: flex
+			flex-direction: column
+			gap: 8px
+
+		&__option
+			display: flex
+			align-items: flex-start
+			gap: 8px
+			font-size: 12px
+			font-weight: 500
+			color: #0a2540
+			cursor: pointer
+
+			input
+				margin-top: 2px
+				accent-color: #1a66ff
+
+		&__actions
+			margin-top: 12px
+			display: grid
+			gap: 8px
+
+		&__apply
+			border: 0
+			border-radius: 10px
+			padding: 10px 12px
+			background: #1a66ff
+			color: #ffffff
+			font: inherit
+			font-size: 12px
+			font-weight: 700
+			cursor: pointer
+
+		&__reset
+			border: 0
+			border-radius: 10px
+			padding: 10px 12px
+			background: transparent
+			color: #90a0b6
+			font: inherit
+			font-size: 12px
+			font-weight: 600
+			cursor: pointer
+
+	.search_price_inputs
+		display: grid
+		grid-template-columns: 1fr 1fr
+		gap: 8px
+
+	.search_price_input
+		display: flex
+		align-items: center
+		gap: 6px
+		border: 1px solid #e1e4ea
+		border-radius: 4px
+		padding: 8px 10px
+		background: #ffffff
+
+		&__label
+			font-size: 11px
+			color: #90a0b6
+			font-weight: 600
+
+		input
+			width: 100%
+			border: 0
+			outline: none
+			font: inherit
+			font-size: 12px
+			font-weight: 600
+			color: #0a2540
+			background: transparent
+			padding: 0
+
+	.search_grid
+		display: grid
+		grid-template-columns: repeat(3, minmax(0, 1fr))
+		gap: 18px
+
+	.search_more
+		margin: 22px auto 10px
+		display: block
+		min-width: 240px
+		height: 34px
+		border-radius: 10px
+		border: 0
+		background: #f3f5f7
+		color: #0a2540
+		font: inherit
+		font-size: 12px
+		font-weight: 600
+		cursor: pointer
+
+	.search_pagination
+		margin-top: 18px
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-wrap: wrap
+		gap: 6px
+
+	.search_page_num
+		min-width: 36px
+		height: 36px
+		padding: 0 8px
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		border-radius: 8px
+		border: none
+		background: transparent
+		color: #2c3340
+		font-size: 13px
+		font-weight: 600
+
+		&--active
+			background: transparent
+			border: none
+			color: #105bfb
+			font-weight: 700
+
+	.search_page_btn
+		min-width: 36px
+		height: 36px
+		padding: 0 8px
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		border-radius: 8px
+		background: #ffffff
+		color: #2c3340
+		font-size: 18px
+		line-height: 1
+		font-weight: 600
+
+		&--prev
+			border: 1px solid #f3f4f7
+
+		&--next
+			border: 1px solid #105bfb
+
+	.search_page_dots
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		min-width: 28px
+		color: #2c3340
+		font-size: 14px
+		font-weight: 700
+		user-select: none
+
+.search_filter.is-collapsed .search_filter__actions
+	display: none
+@media (max-width: 1100px)
+	.catalog .search_layout
+		grid-template-columns: 240px 1fr
+	.catalog .search_grid
+		grid-template-columns: repeat(2, minmax(0, 1fr))
+@media (max-width: 767px)
+	.catalog .search_layout
+		grid-template-columns: 1fr
+		gap: 16px
+	.catalog .search_sidebar
+		position: static
+		order: 1
+	.catalog .search_main
+		order: 2
+	.catalog .search_filter
+		padding: 12px
+	.catalog .search_grid
+		grid-template-columns: 1fr
+		gap: 12px
+	.catalog .search_more
+		width: 100%
+		max-width: none
+		margin-left: 0
+		margin-right: 0
+	.catalog .search_pagination
+		gap: 4px
+	.catalog .search_page_btn, .catalog .search_page_num
+		min-width: 32px
+		height: 32px
+		font-size: 12px
+	.catalog .search_filter--popular
+		display: block
+.header-desktop
+	display: block
+.header-mobile
+	display: none
+@media (max-width: 767px)
+	.header-desktop
+		display: none
+	.header-mobile
+		display: block
+	
+/* —— Desktop top row —— */
+.brand
+	display: inline-flex
+	align-items: flex-end
+	gap: 14px
+	color: var(--color-accent)
+	line-height: 1
+
+	&-lines
+		display: flex
+		flex-direction: column
+		gap: 2px
+
+	&-main
+		font-size: clamp(22px, 2.4vw, 30px)
+		font-weight: 800
+		letter-spacing: 0.02em
+
+	&-sub
+		font-size: clamp(13px, 1.4vw, 16px)
+		font-weight: 600
+		opacity: 0.95
+
+	&-tubo
+		font-size: clamp(22px, 2.5vw, 34px)
+		font-weight: 800
+		letter-spacing: 0.04em
+		padding-bottom: 1px
+
+.catalog-btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	gap: 12px
+	border: 0
+	border-radius: var(--radius-btn)
+	background: var(--color-accent)
+	color: #fff
+	font-family: inherit
+	font-weight: 700
+	font-size: 12px
+	letter-spacing: 0.04em
+	text-transform: uppercase
+	padding: 12px 22px
+	cursor: pointer
+	transition: background 0.15s ease
+
+	&:hover
+		background: var(--color-accent-dark)
+
+	&-burger
+		width: 18px
+		height: 14px
+		border-top: 2px solid #fff
+		border-bottom: 2px solid #fff
+		position: relative
+
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			border-top: 2px solid #fff
+
+	&--desktop
+		flex-shrink: 0
+
+.main-nav
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	gap: 0
+	position: relative
+
+	a
+		padding: 0 10px
+		border-left: 1px solid var(--color-border-soft)
+		font-size: 16px
+		font-weight: 500
+		color: var(--color-text)
+		line-height: 1.2
+
+		&:first-child
+			border-left: 0
+			padding-left: 0
+
+	&-arrow
+		display: inline-block
+		margin-left: 6px
+		font-weight: 600
+		color: #000000

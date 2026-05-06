@@ -1,0 +1,1042 @@
+/* ========== Product page (prod2.png) ========== */
+.page_content.product
+	background: #ffffff
+	color: var(--color-text)
+	border-radius: 12px
+	padding: 20px 20px 32px
+	border: 1px solid var(--color-border-soft)
+	box-shadow: none
+.product-hero
+	padding: 6px 6px 16px
+
+.product-title
+	margin: 6px 0 16px
+	font-size: clamp(20px, 2.4vw, 30px)
+	font-weight: 800
+	color: #0a2540
+	line-height: 1.25
+
+.product-top
+	display: grid
+	grid-template-columns: 420px 1fr 280px
+	gap: 22px
+	align-items: start
+
+.product-media
+	display: grid
+	gap: 12px
+
+	&__main
+		background: #f4f4f4
+		border-radius: 10px
+		padding: 20px
+		position: relative
+		border: 1px solid #e5e5e5
+
+		img
+			width: 100%
+			height: auto
+			display: block
+			object-fit: contain
+
+	&__thumbs
+		display: flex
+		flex-wrap: wrap
+		gap: 8px
+
+	&__thumb
+		padding: 0
+		border: 2px solid transparent
+		border-radius: 8px
+		overflow: hidden
+		cursor: pointer
+		background: #f5f7fb
+		width: 64px
+		height: 64px
+		flex-shrink: 0
+
+		&.is-active
+			border-color: var(--color-accent)
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			display: block
+
+.product-badge
+	position: absolute
+	top: 10px
+	left: 10px
+	display: inline-flex
+	align-items: center
+	gap: 8px
+	padding: 6px 8px
+	border-radius: 999px
+	background: rgba(255,255,255,0.95)
+	color: #0a2540
+	font-size: 12px
+	font-weight: 700
+	box-shadow: 0 2px 8px rgba(0,0,0,0.06)
+
+.product-flag
+	width: 18px
+	height: 12px
+	border-radius: 2px
+	background: linear-gradient(90deg, #2ecc71 0 33%, #ffffff 33% 66%, #e74c3c 66% 100%)
+	box-shadow: 0 0 0 1px rgba(10,37,64,0.12) inset
+.product-specs
+	padding: 4px 0
+
+	&__title
+		margin: 0 0 12px
+		font-size: 18px
+		font-weight: 800
+		color: #0a2540
+
+	&__list
+		margin: 0
+		padding: 0
+		display: grid
+		gap: 10px
+
+		&--extra
+			margin-top: 10px
+
+	&__more
+		margin-top: 4px
+		border: none
+
+	&__more-summary
+		cursor: pointer
+		font-size: 13px
+		font-weight: 700
+		color: var(--color-accent)
+		list-style: none
+		padding: 8px 0 0
+
+		&::-webkit-details-marker
+			display: none
+
+.product-spec
+	display: grid
+	grid-template-columns: 1fr auto
+	gap: 12px
+	border-bottom: 1px solid #e8edf4
+	padding-bottom: 10px
+
+	dt
+		margin: 0
+		font-size: 13px
+		color: #5c6b7a
+
+	dd
+		margin: 0
+		font-size: 13px
+		font-weight: 700
+		color: #0a2540
+		text-align: right
+
+.product-link
+	display: inline-flex
+	margin-top: 12px
+	font-size: 13px
+	font-weight: 700
+	color: var(--color-accent)
+	text-decoration: underline
+	text-underline-offset: 3px
+.product-buy
+	background: #ffffff
+	border-radius: 10px
+	padding: 16px
+	color: var(--color-text)
+	border: 1px solid var(--color-border-soft)
+	box-shadow: none
+
+	&__price
+		background: #f4f4f4
+		border: 1px solid #e8e8e8
+		border-radius: 10px
+		padding: 14px 16px
+		margin-bottom: 12px
+
+	&__old
+		font-size: 12px
+		color: #7b8797
+		text-decoration: line-through
+		margin-bottom: 6px
+		font-weight: 600
+
+	&__current
+		font-size: 22px
+		font-weight: 800
+		color: #e02020
+
+	&__btn
+		display: block
+		width: 100%
+		text-align: center
+		padding: 13px 12px
+		border-radius: var(--radius-btn)
+		font-weight: 700
+		text-decoration: none
+		font-size: 15px
+		box-sizing: border-box
+
+		&--ghost
+			border: 1px solid var(--color-border-soft)
+			color: var(--color-accent)
+			background: #fff
+			margin-top: 0
+
+		&--primary
+			background: var(--color-accent)
+			color: #fff
+			margin-top: 10px
+			border: none
+
+			&:hover
+				background: var(--color-accent-dark)
+.product-body
+	padding: 6px 6px 0
+
+.product-columns
+	display: grid
+	grid-template-columns: 1fr 380px
+	gap: 24px
+	align-items: start
+
+.product-desc-heading
+	margin: 0 0 12px
+	font-size: 18px
+	font-weight: 800
+	color: #0a2540
+
+.product-subheading
+	margin: 18px 0 8px
+	font-size: 15px
+	font-weight: 800
+	color: #0a2540
+
+.product-text
+	font-size: 14px
+	line-height: 1.65
+	color: #3d4f5f
+
+	strong
+		color: #0a2540
+
+.product-ul
+	margin: 10px 0 14px
+	padding-left: 20px
+
+.product-ol
+	margin: 10px 0 14px
+	padding-left: 20px
+
+.product-side
+	display: grid
+	gap: 14px
+
+.product-promo
+	display: block
+	text-decoration: none
+	color: #fff
+	border-radius: 12px
+	overflow: hidden
+	padding: 14px 14px 0
+	box-shadow: 0 8px 24px rgba(10, 37, 64, 0.12)
+
+	&--blue
+		background: linear-gradient(160deg, #2b7aff 0%, #1d63ed 100%)
+
+	&--orange
+		background: linear-gradient(160deg, #ff8a3d 0%, #f05a1c 100%)
+
+	&--red
+		background: linear-gradient(160deg, #ff4b2b 0%, #ff2b6a 100%)
+
+	&__title
+		font-size: 14px
+		font-weight: 900
+		margin-bottom: 6px
+
+	&__text
+		font-size: 12px
+		opacity: 0.95
+		margin-bottom: 10px
+
+	&__img img
+		width: 100%
+		height: auto
+		display: block
+		border-radius: 10px 10px 0 0
+.product-showcase
+	display: block
+	text-decoration: none
+	color: var(--color-text)
+	background: #f4f4f4
+	border: 1px solid #e5e5e5
+	border-radius: 12px
+	padding: 14px 14px 0
+	overflow: hidden
+
+	&__label
+		font-size: 15px
+		font-weight: 800
+		color: var(--color-text)
+		margin-bottom: 4px
+
+	&__hint
+		font-size: 12px
+		color: var(--color-text-muted)
+		margin-bottom: 12px
+
+	&__img
+		margin: 0 -14px
+
+		img
+			width: 100%
+			height: auto
+			display: block
+			max-height: 320px
+			object-fit: contain
+			object-position: center bottom
+			background: linear-gradient(180deg, #f4f4f4 0%, #ececec 100%)
+
+.product-video
+	background: #f5f7fb
+	border: 1px solid #e8edf4
+	border-radius: 12px
+	padding: 12px
+
+	&__title
+		font-size: 13px
+		font-weight: 900
+		color: #0a2540
+		margin-bottom: 10px
+
+	&__frame
+		position: relative
+		border-radius: 10px
+		overflow: hidden
+		background: #000
+
+	&__player
+		width: 100%
+		height: auto
+		display: block
+		border-radius: 10px
+		background: #000
+.product-section
+	margin-top: 28px
+
+.product-h2
+	margin: 0 0 14px
+	font-size: 18px
+	font-weight: 900
+	color: #0a2540
+
+.product-table-wrap
+	overflow: auto
+	border-radius: 12px
+	border: 1px solid #e8edf4
+	background: #fafbfd
+
+	&--compare
+		background: #fff
+
+.product-table
+	width: 100%
+	border-collapse: collapse
+	min-width: 680px
+
+	th, td
+		padding: 10px 12px
+		text-align: left
+		font-size: 13px
+		border-bottom: 1px solid #e8edf4
+		color: #1a2b3c
+		vertical-align: middle
+
+	th
+		color: #0a2540
+		font-weight: 800
+		background: #f5f7fb
+
+	tbody th
+		white-space: nowrap
+		font-weight: 700
+		color: #5c6b7a
+		background: #fafbfd
+
+	&--compare
+		.product-table__corner
+			background: #fff
+			border-bottom: 1px solid #e8edf4
+
+		td
+			text-align: center
+			white-space: nowrap
+
+		tbody th
+			text-align: left
+
+	&__model-head
+		text-align: center
+		vertical-align: bottom
+		background: #fff
+		font-weight: 800
+		color: #0a2540
+		white-space: normal
+		min-width: 120px
+
+	&__model-img-wrap
+		width: 100px
+		height: 100px
+		margin: 0 auto 8px
+		padding: 8px
+		background: #f5f7fb
+		border-radius: 10px
+		border: 1px solid #e8edf4
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+			display: block
+
+	&__model-code
+		font-size: 13px
+		font-weight: 800
+.product-kit
+	display: flex
+	flex-direction: column
+	gap: 12px
+
+	&__pair
+		display: grid
+		grid-template-columns: repeat(2, minmax(0, 1fr))
+		gap: 12px
+
+.product-cards
+	display: grid
+	grid-template-columns: repeat(3, minmax(0, 1fr))
+	gap: 14px
+
+.product-mini
+	display: grid
+	gap: 10px
+	background: #f4f4f4
+	border: 1px solid #e5e5e5
+	border-radius: 12px
+	padding: 14px
+	text-decoration: none
+	color: var(--color-text)
+	transition: box-shadow 0.2s ease
+
+	&--full
+		grid-column: 1 / -1
+
+	&:hover
+		box-shadow: 0 4px 14px rgba(5, 22, 46, 0.08)
+
+	img
+		width: 100%
+		height: 110px
+		object-fit: cover
+		border-radius: 10px
+		display: block
+
+	span
+		font-size: 13px
+		font-weight: 700
+		line-height: 1.35
+
+.product-consumables
+	list-style: none
+	margin: 0
+	padding: 0
+	display: grid
+	gap: 0
+	border: 1px solid #e8edf4
+	border-radius: 12px
+	overflow: hidden
+	background: #fff
+
+	&__item
+		border-bottom: 1px solid #e8edf4
+
+		&:last-child
+			border-bottom: none
+
+	&__link
+		display: flex
+		align-items: center
+		gap: 14px
+		padding: 12px 14px
+		text-decoration: none
+		color: inherit
+		transition: background 0.15s ease
+
+		&:hover
+			background: #f5f7fb
+
+	&__thumb
+		width: 56px
+		height: 56px
+		border-radius: 8px
+		overflow: hidden
+		flex-shrink: 0
+		border: 1px solid #e8edf4
+		background: #fafbfd
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			display: block
+
+	&__text
+		display: flex
+		flex-direction: column
+		gap: 4px
+		min-width: 0
+
+	&__code
+		font-size: 13px
+		font-weight: 800
+		color: var(--color-text)
+
+	&__desc
+		font-size: 12px
+		color: var(--color-text-muted)
+		line-height: 1.45
+.product-related
+	display: grid
+	grid-template-columns: repeat(3, minmax(0, 1fr))
+	gap: 16px
+.product-related-card
+	position: relative
+	background: #fff
+	border: 1px solid #e8edf4
+	border-radius: 12px
+	padding: 14px
+	display: grid
+	gap: 10px
+	box-shadow: 0 4px 16px rgba(10, 37, 64, 0.06)
+
+	&__badge
+		position: absolute
+		top: 12px
+		left: 12px
+		display: inline-flex
+		align-items: center
+		gap: 6px
+		padding: 4px 8px
+		border-radius: 999px
+		background: rgba(255,255,255,0.95)
+		font-size: 11px
+		font-weight: 700
+		color: #0a2540
+		box-shadow: 0 1px 4px rgba(0,0,0,0.08)
+		z-index: 1
+
+	&__img
+		width: 100%
+		height: 140px
+		object-fit: contain
+		display: block
+		margin-top: 8px
+
+	&__title
+		margin: 0
+		font-size: 13px
+		font-weight: 700
+		color: #0a2540
+		line-height: 1.35
+		min-height: 2.7em
+
+	&__price
+		font-size: 18px
+		font-weight: 800
+		color: #e02020
+
+	&__btn
+		display: block
+		text-align: center
+		padding: 12px
+		border-radius: var(--radius-btn)
+		background: var(--color-accent)
+		color: #fff
+		font-weight: 700
+		text-decoration: none
+		font-size: 14px
+
+		&:hover
+			background: var(--color-accent-dark)
+
+.product-cta-banner
+	margin-top: 32px
+	padding: 22px 28px
+	border-radius: 12px
+	background: var(--color-navy-promo)
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	gap: 16px 24px
+	justify-content: space-between
+
+	&__text
+		flex: 1 1 220px
+
+	&__title
+		font-size: 22px
+		font-weight: 800
+		color: #fff
+		margin-bottom: 6px
+		letter-spacing: 0.02em
+
+	&__accent
+		color: #ff8a65
+		text-transform: uppercase
+
+	&__sub
+		font-size: 13px
+		color: rgba(255,255,255,0.88)
+
+	&__btn
+		background: var(--color-accent)
+		color: #fff
+		font-weight: 700
+		text-decoration: none
+		padding: 14px 36px
+		border-radius: var(--radius-btn)
+		font-size: 15px
+		flex-shrink: 0
+
+		&:hover
+			background: var(--color-accent-dark)
+
+.product-sticky-buy
+	position: sticky
+	bottom: 0
+	margin-top: 22px
+	background: rgba(255, 255, 255, 0.92)
+	backdrop-filter: blur(10px)
+	border: 1px solid #e8edf4
+	border-radius: 14px
+	padding: 12px 14px
+	display: none
+	gap: 12px
+	align-items: center
+	justify-content: space-between
+	box-shadow: 0 -4px 20px rgba(10, 37, 64, 0.08)
+
+	&__label
+		font-size: 11px
+		color: #5c6b7a
+
+	&__value
+		font-size: 16px
+		font-weight: 800
+		color: #e02020
+
+	&__btn
+		flex-shrink: 0
+		background: var(--color-accent)
+		color: #fff
+		text-decoration: none
+		padding: 12px 20px
+		border-radius: var(--radius-btn)
+		font-weight: 700
+@media (max-width: 1100px)
+	.product-top
+		grid-template-columns: 380px 1fr 260px
+@media (max-width: 900px)
+	.product-top
+		grid-template-columns: 1fr
+	.product-buy
+		order: 3
+	.product-columns
+		grid-template-columns: 1fr
+	.product-related
+		grid-template-columns: 1fr
+	.product-cta-banner
+		flex-direction: column
+		align-items: stretch
+		text-align: center
+	.product-cta-banner__btn
+		width: 100%
+		text-align: center
+	.product-kit__pair
+		grid-template-columns: 1fr
+@media (max-width: 767px)
+	.page_content.product
+		padding: 14px 14px 18px
+	.product-title
+		margin-bottom: 12px
+	.product-buy
+		display: none
+	.product-cards
+		grid-template-columns: 1fr
+	.product-kit__pair
+		grid-template-columns: 1fr
+	.product-sticky-buy
+		display: flex
+.mini_slider
+	float: right
+	position: relative
+	overflow: hidden
+
+	.mini_slider_body
+		display: flex
+		align-items: center
+		transition: transform 0.3s ease
+		will-change: transform
+
+		> div
+			flex-shrink: 0
+
+	.over
+		border-radius: 10px
+		overflow: hidden
+		margin: 5px
+
+	img
+		display: block
+		width: 100%
+		height: auto
+
+	.mini_slider_nav a
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 40px
+		height: 40px
+		background: rgba(0, 0, 0, 0.5)
+		color: #fff
+		text-align: center
+		line-height: 40px
+		text-decoration: none
+		cursor: pointer
+		z-index: 10
+		transition: background 0.2s
+		border-radius: 10px
+		margin: 0 5px
+
+		&.L
+			left: 0
+
+		&.R
+			right: 0
+
+		&:hover
+			background: rgba(0, 0, 0, 0.8)
+@media (max-width: 767px)
+	.mini_slider
+		float: none
+		width: 100%
+.clear
+	clear: both
+blockquote
+	background: #F2F4F6
+	border-radius: 10px
+	overflow: hidden
+	width: 100%
+	margin: 0
+	padding: 20px
+/* Общий контейнер плашки */
+.video_orange
+	position: relative
+	background-color: #FD5E2F
+	padding: 20px 60px
+	text-align: center
+	overflow: hidden
+	border-radius: 10px
+	margin: 20px 0
+
+	> div
+		color: #fff
+		font-size: 18px
+		margin: 0
+		position: relative
+		z-index: 1
+
+	a
+		display: inline-block
+		background-color: #105BFB
+		color: #fff
+		text-decoration: none
+		padding: 5px 15px
+		margin-left: 5px
+		border-radius: 10px
+		font-weight: 500
+		transition: all 0.1s ease
+		margin-top: 5px
+
+		&:active
+			transform: translateY(2px)
+			box-shadow: 0 2px 0 #0a3a9e
+
+		&:hover
+			background-color: #2a6cfc
+
+	.video_orange1, .video_orange2
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 60px
+		color: #0A2540
+		pointer-events: none
+		z-index: 0
+
+	.video_orange1
+		left: 30px
+		font-size: 39px
+		transform: translateY(-50%) rotate(-15deg)
+		top: 21px
+
+	.video_orange2
+		right: 13px
+		font-size: 51px
+		transform: translateY(-50%) rotate(15deg)
+		bottom: 0
+@media (max-width: 767px)
+	.video_orange
+		padding: 15px 40px
+	.video_orange > div
+		font-size: 14px
+	.video_orange .video_orange1
+		font-size: 50px
+		left: -10px
+	.video_orange .video_orange2
+		font-size: 45px
+		right: -10px
+.faq > div
+	border: 1px solid #2D68FF
+	margin-bottom: 15px
+	border-radius: 10px
+	overflow: hidden
+
+.faq-item
+	border: 1px solid #2D68FF
+	border-radius: 10px
+	margin-bottom: 15px
+	overflow: hidden
+	transition: all 0.2s
+
+	&.active .faq_text
+		padding: 0 20px 20px 20px
+
+.faq_title
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 15px 20px
+	font-size: 18px
+	font-weight: 500
+	cursor: pointer
+	background-color: #fff
+	transition: background 0.2s
+	user-select: none
+
+.faq_text
+	padding: 20px
+	background-color: #fff
+	font-size: 16px
+	line-height: 1.5
+	color: #333
+	display: none
+	transition: max-height 0.3s ease, padding 0.3s ease
+
+.page_content.video-reviews
+	display: grid
+	gap: 15px
+	width: 100%
+	max-width: 100%
+	grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 767px)
+	.page_content.video-reviews
+		grid-template-columns: 1fr
+
+.video-reviews .rev_el
+	position: relative
+	border-radius: 10px
+	overflow: hidden
+
+	video
+		max-width: 100%
+		height: auto
+		display: block
+		margin: 0 auto
+		border-radius: 10px
+		overflow: hidden
+
+	.title_el
+		color: #000000
+
+.video-modal-overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.6)
+	z-index: 1000
+	display: flex
+	justify-content: center
+	align-items: center
+	opacity: 0
+	transition: opacity 0.3s ease
+
+	&.active
+		opacity: 1
+
+.video-modal-container
+	position: relative
+	max-width: 80%
+	max-height: 80%
+	background: #000
+	border-radius: 8px
+	overflow: hidden
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5)
+
+	video
+		display: block
+		width: 100%
+		height: auto
+		max-height: 80vh
+
+.video-modal-close
+	position: absolute
+	top: 10px
+	right: 10px
+	width: 30px
+	height: 30px
+	background: rgba(0, 0, 0, 0.6)
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	z-index: 1001
+	transition: background 0.2s
+
+	&:hover
+		background: rgba(0, 0, 0, 0.9)
+
+	svg
+		width: 18px
+		height: 18px
+.news-grid
+	display: grid
+	grid-template-columns: 1fr 1fr
+	gap: 20px
+
+.news_el
+	flex: 0 0 auto
+
+	img
+		width: 100%
+		height: auto
+		display: block
+		margin-bottom: 12px
+		border-radius: 10px
+
+	&:nth-child(3n)
+		grid-column: 1 / -1
+
+.news_date
+	color: #105BFB
+	border-radius: 10px
+	border: 1px solid #105BFB
+	display: inline-block
+	padding: 5px 15px
+
+@media (max-width: 767px)
+	.news-grid
+		grid-template-columns: 1fr
+
+.content_bottom
+	display: block
+	max-width: 1200px
+	margin: 0 auto
+	padding: 20px
+	position: relative
+
+.share
+	color: #105BFB
+	display: flex
+	align-items: center
+	padding: 5px 15px
+
+	svg
+		padding-right: 5px
+
+.page_content svg, .page_content img
+	max-width: 100%
+
+.content_bottomN
+	display: flex
+	padding: 20px 0
+	position: relative
+	justify-content: space-between
+	flex-direction: row
+
+.page_title
+	font-size: 24px
+	margin-bottom: 20px
+
+.slider
+	overflow: hidden
+	width: 100%
+	position: relative
+
+.slider-track
+	display: flex
+	gap: 20px
+	transition: transform 0.3s ease
+	will-change: transform
+
+.slider-btn
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	background: rgba(0,0,0,0.5)
+	color: white
+	border: none
+	width: 40px
+	height: 40px
+	border-radius: 10px
+	cursor: pointer
+	font-size: 24px
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: 0.2s
+	z-index: 10
+
+	&.prev
+		left: 10px
+
+	&.next
+		right: 10px
+
+	&:hover
+		background: rgba(0,0,0,0.8)
+
+	&.disabled
+		opacity: 0.4
+		cursor: default
+		pointer-events: none
+
+@media (max-width: 767px)
+	.news_el
+		width: 100%
+	.slider-track
+		gap: 0
+
+.page_subtitle
+	font-weight: 500

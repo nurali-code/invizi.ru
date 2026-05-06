@@ -1,0 +1,96 @@
+%flex
+    display: flex
+
+%flex-jb
+    @extend %flex
+    justify-content: space-between
+
+%flex-wrap
+    @extend %flex
+    flex-wrap: wrap
+
+%flex-row
+    @extend %flex
+    flex-direction: row
+%flex-col
+    @extend %flex
+    flex-direction: column
+
+%flex-ae
+    @extend %flex
+    align-items: flex-end
+
+%flex-as
+    @extend %flex
+    align-items: flex-start
+
+%flex-ac
+    @extend %flex
+    align-items: center
+
+%flex-ja
+    @extend %flex
+    justify-content: space-around
+
+%flex-je
+    @extend %flex
+    justify-content: flex-end
+
+%flex-js
+    @extend %flex
+    justify-content: flex-start
+
+%flex-jc
+    @extend %flex
+    justify-content: center
+
+%flex-cc
+    @extend %flex
+    align-items: center
+    justify-content: center
+
+%flex-ac-jb
+    @extend %flex
+    align-items: center
+    justify-content: space-between
+
+%cols
+    @extend %flex-wrap
+    --gap: 20px
+    --col: 2
+    gap: var(--gap)
+    &>*
+        flex-shrink: 0
+        width: calc( (100% - var(--gap) * (var(--col) - 1)) / var(--col) )
+
+    @media screen and ( max-width: 700px )
+        --gap: 14px
+        &>*
+            width: 100%
+            max-width: 100%
+
+@media (max-width: 767px)
+    %mob-slick-arrows
+        padding-bottom: 74px
+        --offset: 8px
+        .slick
+            &-list
+                padding: 0 var(--pad-x)
+
+            &-slider
+            &-slide
+                width: 90vw
+
+            &-arrow
+                top: auto
+                bottom: 15px
+                transform: none
+
+            &-prev
+                left: calc( 50% - (var(--arrow-size) - 9px) )
+                transform: translateX(-50%)
+
+            &-next
+                left: calc( 50% + (var(--arrow-size) - 9px) )
+                right: auto
+                transform: translateX(-50%)

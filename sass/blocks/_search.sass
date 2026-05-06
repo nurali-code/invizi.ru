@@ -1,0 +1,218 @@
+/* ====== Поиск в шапке (.serF) ====== */
+.ser
+	// Триггер в шапке
+	&_wrap
+		position: relative
+		padding: 0 6px
+
+	&_toggle
+		width: 40px
+		height: 100%
+		min-height: 40px
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		border: 0
+		background: transparent
+		padding: 0
+		cursor: pointer
+
+	// Открываем панель при фокусе/ховере по блоку
+	&_wrap:focus-within &F, &_wrap:hover &F
+		display: block
+
+	// Выпадающая панель поиска
+	&F
+		position: absolute
+		top: calc(100% + 10px)
+		right: 0
+		width: min(720px, calc(100vw - 40px))
+		background: #ffffff
+		border: 1px solid #e6e8ec
+		border-radius: 14px
+		box-shadow: 0 18px 40px rgba(5, 22, 46, 0.14)
+		padding: 18px
+		display: none
+		z-index: 50
+		max-height: min(640px, calc(100vh - 140px))
+		overflow: auto
+
+	// Форма поиска
+	&B
+		margin: 0
+		position: relative
+
+	&_input_icon
+		position: absolute
+		left: 14px
+		top: 50%
+		transform: translateY(-50%)
+		display: inline-flex
+		width: 20px
+		height: 20px
+		pointer-events: none
+
+		svg
+			width: 20px
+			height: 20px
+			display: block
+
+	&_input
+		width: 100%
+		border: 1px solid #e1e4ea
+		border-radius: 10px
+		padding: 14px 14px 14px 46px
+		font: inherit
+		font-size: 14px
+		color: var(--color-text)
+		background: #ffffff
+		outline: none
+
+		&:focus
+			border-color: rgba(43, 101, 236, 0.45)
+			box-shadow: 0 0 0 3px rgba(43, 101, 236, 0.12)
+
+	// Заголовок результатов
+	&_head
+		margin-top: 12px
+		display: flex
+		flex-direction: column
+		gap: 4px
+
+	&_head_title
+		font-size: 28px
+		font-weight: 600
+		color: #1a66ff
+		line-height: 1.12
+
+	&_head_meta
+		font-size: 16px
+		color: var(--color-text)
+		opacity: 0.8
+
+	// Список результатов
+	&_list
+		margin-top: 18px
+		display: flex
+		flex-direction: column
+		gap: 16px
+
+	&_item
+		display: grid
+		grid-template-columns: 100px 1fr
+		gap: 16px
+		align-items: center
+		padding: 18px 18px
+		border-radius: 12px
+		background: #f3f5f7
+		border: 2px solid transparent
+		transition: border-color 0.15s ease, background 0.15s ease
+
+		&:hover
+			background: #eef2f6
+
+		&--active
+			background: #eef4fb
+			border-color: #1a66ff
+
+	// Картинка товара
+	&_item_img
+		width: 100px
+		height: auto
+		object-fit: contain
+		border-radius: 10px
+		border: 0
+		background: #ffffff
+
+	// Инфо-колонка
+	&_item_info
+		display: flex
+		flex-direction: column
+		min-width: 0
+
+	&_item_badge
+		display: inline-flex
+		align-items: center
+		gap: 8px
+		font-size: 14px
+		font-weight: 500
+		color: #3a3a3a
+		line-height: 1.15
+		margin-bottom: 4px
+
+	&_item_flag
+		display: inline-flex
+		width: 20px
+		height: 12px
+
+	&_item_title
+		font-size: 20px
+		font-weight: 700
+		color: #0a2540
+		line-height: 1.12
+		white-space: normal
+
+	&_item_meta
+		margin-top: 6px
+		font-size: 20px
+		font-weight: 700
+		color: #0a2540
+		line-height: 1.12
+
+	// Блок цен
+	&_item_prices
+		margin-top: 14px
+		display: flex
+		flex-direction: column
+		gap: 8px
+
+	&_item_price_label
+		font-size: 22px
+		font-weight: 500
+		color: #0a2540
+
+	&_item_price_row
+		display: inline-flex
+		align-items: baseline
+		gap: 14px
+		flex-wrap: wrap
+
+	&_item_price_new
+		font-size: 22px
+		font-weight: 700
+		color: #0a2540
+		display: inline-flex
+		align-items: baseline
+		gap: 6px
+
+	&_item_price_old
+		font-size: 18px
+		font-weight: 500
+		color: #9aa7b7
+		text-decoration: line-through
+		text-decoration-thickness: 1px
+		text-decoration-color: rgba(154, 167, 183, 0.9)
+		display: inline-flex
+		align-items: baseline
+		gap: 6px
+
+	&_item_price_currency
+		opacity: 0.9
+
+/* --- Адаптив (правила шапки, попавшие сюда) --- */
+@media (max-width: 1100px)
+	.header-location
+		order: 5
+		width: 100%
+		max-width: none
+		margin-left: 0
+		margin-top: 4px
+	.header-toolbar
+		margin-left: auto
+@media (max-width: 900px)
+	.header-bottom .main-nav
+		order: 6
+		width: 100%
+		padding-top: 8px
+		border-top: 1px solid var(--color-border-soft)
+		margin-top: 4px

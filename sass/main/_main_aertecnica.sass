@@ -1,0 +1,109 @@
+.main_aertecnica
+    background: #f7f7f7
+    margin: var(--section-pad-y) 0
+    overflow: hidden
+
+    .container
+        @extend %flex-col
+
+    &__list
+        list-style: none
+        margin: 0
+        padding: 0
+        @extend %cols
+        --col: 4
+
+        @media (max-width: 1024px)
+            --col: 2
+
+        @media (max-width: 600px)
+            --col: 1
+            gap: 12px
+
+    &__cta
+        width: fit-content
+        @extend %flex-col
+        align-items: center
+        gap: 30px
+        position: relative
+        margin: 0 auto
+
+        &-text
+            margin: 0
+            font-size: 24px
+            line-height: 1.4
+            color: #0a2540
+            text-align: center
+            max-width: 510px
+
+            @media (max-width: 767px)
+                font-size: 18px
+
+    .btn
+        width: fit-content
+
+    &__arrow
+        position: absolute
+        right: -30px
+        top: 30px
+        width: 29px
+        aspect-ratio: 29/120
+        transform: rotate(18deg)
+        pointer-events: none
+
+    @media (max-width: 767px)
+        &__cta
+            &-text
+                max-width: 380px
+
+        &__arrow
+            right: 0px
+            width: 14px
+
+    @media (max-width: 600px)
+        &__cta
+            padding-right: 10px
+            &-text
+                font-size: 16px
+
+.aertecnica-stat
+    background: #fff
+    border-radius: 10px
+    padding: 15px 20px
+    @extend %flex-col
+    @extend %flex-jb
+    gap: 25px
+
+    &__text
+        font-family: "Montserrat", sans-serif
+        font-weight: 600
+        font-size: 24px
+        line-height: 1.3
+        color: #0a2540
+        @extend %flex-col
+        gap: 6px
+
+        @media (max-width: 1200px)
+            font-size: 20px
+
+        @media (max-width: 600px)
+            font-size: 16px
+
+    &__num
+        text-transform: uppercase
+        color: #105bfb
+        display: block
+
+    &__icon
+        width: 100px
+        height: 100px
+        object-fit: contain
+        align-self: flex-end
+
+        @media (max-width: 600px)
+            width: 60px
+            height: 60px
+
+    @media (max-width: 700px)
+        min-height: 180px
+        padding: 12px
