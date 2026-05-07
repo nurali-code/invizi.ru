@@ -56,9 +56,17 @@ body
 	font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif
 	color: var(--color-text)
 	-webkit-font-smoothing: antialiased
-a
+
+a, button
 	color: inherit
 	text-decoration: none
+	transition: all 0.3s ease
+	&:hover
+		opacity: .8
+
+	&:active
+		opacity: 1
+		transform: scale(0.95)
 
 img
 	max-width: 100%

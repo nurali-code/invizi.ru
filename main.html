@@ -10,257 +10,884 @@
 </head>
 
 <body>
-    <section class="hits">
-        <div class="container hits__inner">
-            <div class="headline">
-                <h2 class="headline-title headline-line">Хиты продаж</h2>
-                <a href="#" class="btn btn--outline btn--lg lg-show">
+    <header class="site-header" id="site-header">
+        <div class="container">
+            <!-- Десктоп: faq.png -->
+            <div class="header-desktop">
+                <div class="header-top">
+                    <a class="brand" href="/">
+                        <img src="imgs/logo.svg" alt="logo">
+                    </a>
+                    <div class="header-contacts">
+                        <a class="header-contact-link" href="mailto:info@aertecnica-tubo.ru">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#email"></use>
+                            </svg> info@aertecnica-tubo.ru
+                        </a>
+                        <a class="header-contact-link" href="tel:+78007750176">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#phone"></use>
+                            </svg> 8 800-775-01-76
+                        </a>
+                        <div class="header-contact-pill">
+                            <a class="header-pill-phone" type="button" aria-haspopup="true">
+                                <svg class="ic" aria-hidden="true">
+                                    <use xlink:href="imgs/ic.svg#phone"></use>
+                                </svg> +7 930-977-89-29
+                                <span class="header-pill-caret none"></span>
+                            </a>
+                            <a href="https://t.me/" class="header-messenger" aria-label="Telegram" target="_blank">
+                                <svg class="ic" aria-hidden="true">
+                                    <use xlink:href="imgs/ic.svg#tg"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="header-messenger" aria-label="Чат">
+                                <img class="ic" src="imgs/sprite/max.svg" alt="Чат">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <button class="catalog-btn catalog-btn--desktop" type="button" id="catalog-mega-toggle">
+                        <svg class="ic" aria-hidden="true">
+                            <use xlink:href="imgs/ic.svg#burger"></use>
+                        </svg>
+                        <span class="catalog-btn-text">Каталог</span>
+                    </button>
+                    <nav class="main-nav">
+                        <a href="#">Проект</a>
+                        <a href="#">Монтаж</a>
+                        <a href="#">Наши работы</a>
+                        <a href="#" class="top-dop-menu-a" style="font-weight: 700;"><span class="main-nav-arrow">›
+                            </span> Меню</a>
+                        <ul class="top-dop-menu">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Акции</a></li>
+                            <li><a href="#">Технологии</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-location" title="Адрес">
+                        <svg class="ic" aria-hidden="true">
+                            <use xlink:href="imgs/ic.svg#location"></use>
+                        </svg>
+                        <span class="header-location-text">Московская область, <br>Новорижское шоссе.</span>
+                    </div>
+                    <div class="header-toolbar">
+                        <div class="header-region-group">
+                            <span class="region-label">Ваш регион:</span>
+
+                            <details class="header-region-dropdown">
+                                <summary class="header-region-toggle" tabindex="0">Москва</summary>
+                                <ul class="header-region-menu">
+                                    <li><a class="header-region-menu__link" href="index.php?region=msk">Москва</a></li>
+                                    <li><a class="header-region-menu__link"
+                                            href="index.php?region=spb">Санкт-Петербург</a></li>
+                                </ul>
+                            </details>
+
+
+                        </div>
+                        <div class="header-actions">
+                            <div class="header-action ser_b ser_wrap">
+                                <button class="ser_toggle" type="button" aria-label="Поиск">
+                                    <svg class="ic" aria-hidden="true">
+                                        <use xlink:href="imgs/ic.svg#search"></use>
+                                    </svg>
+                                </button>
+
+                                <div class="serF" role="dialog" aria-label="Поиск по сайту">
+                                    <form class="serB" action="#" method="get">
+                                        <svg class="ic ser_input_icon" aria-hidden="true">
+                                            <use xlink:href="imgs/ic.svg#search"></use>
+                                        </svg>
+                                        <input class="ser_input" type="text" name="q" placeholder="Поиск"
+                                            autocomplete="off">
+                                    </form>
+
+                                    <div class="ser_head">
+                                        <div class="ser_head_title">Результаты поиска по запросу “Tubo Dynamica”</div>
+                                        <div class="ser_head_meta">12 результатов по запросу “Tubo Dynamica”</div>
+                                    </div>
+
+                                    <div class="ser_list">
+                                        <a class="ser_item ser_item--active" href="#">
+                                            <img class="ser_item_img" src="test.png" alt="i">
+                                            <span class="ser_item_info">
+                                                <span class="ser_item_badge">
+                                                    <span class="card__flag" aria-hidden="true"></span>
+                                                    <span>Made in Italy</span>
+                                                </span>
+                                                <span class="ser_item_title">Встроенный пылесос TUBO DYNAMICA</span>
+                                                <span class="ser_item_meta">TD23, 300 м²</span>
+                                                <span class="ser_item_prices">
+
+                                                    <span class="ser_item_price_row">
+                                                        <span class="ser_item_price_label">Цена</span>
+                                                        <span class="ser_item_price_new"><span
+                                                                class="ser_item_price_value">299 000</span><span
+                                                                class="ser_item_price_currency">₽</span></span>
+                                                        <span class="ser_item_price_old"><span
+                                                                class="ser_item_price_value">150 000</span><span
+                                                                class="ser_item_price_currency">₽</span></span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a class="ser_item" href="#">
+                                            <img class="ser_item_img" src="test.png" alt="i">
+                                            <span class="ser_item_info">
+                                                <span class="ser_item_badge">
+                                                    <span class="card__flag" aria-hidden="true"></span>
+                                                    <span>Made in Italy</span>
+                                                </span>
+                                                <span class="ser_item_title">Встроенный пылесос TUBO DYNAMICA</span>
+                                                <span class="ser_item_meta">TD23, 300 м²</span>
+                                                <span class="ser_item_prices">
+                                                    <span class="ser_item_price_label">Цена</span>
+                                                    <span class="ser_item_price_row">
+                                                        <span class="ser_item_price_new"><span
+                                                                class="ser_item_price_value">299 000</span><span
+                                                                class="ser_item_price_currency">₽</span></span>
+                                                        <span class="ser_item_price_old"><span
+                                                                class="ser_item_price_value">150 000</span><span
+                                                                class="ser_item_price_currency">₽</span></span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a class="ser_item" href="#">
+                                            <img class="ser_item_img" src="test.png" alt="i">
+                                            <span class="ser_item_info">
+                                                <span class="ser_item_badge">
+                                                    <span class="card__flag" aria-hidden="true"></span>
+                                                    <span>Made in Italy</span>
+                                                </span>
+                                                <span class="ser_item_title">Встроенный пылесос TUBO DYNAMICA</span>
+                                                <span class="ser_item_meta">TD23, 300 м²</span>
+                                                <span class="ser_item_prices">
+                                                    <span class="ser_item_price_label">Цена</span>
+                                                    <span class="ser_item_price_row">
+                                                        <span class="ser_item_price_new"><span
+                                                                class="ser_item_price_value">299 000</span><span
+                                                                class="ser_item_price_currency">₽</span></span>
+                                                        <span class="ser_item_price_old"><span
+                                                                class="ser_item_price_value">150 000</span><span
+                                                                class="ser_item_price_currency">₽</span></span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a class="ser_item" href="#">
+                                            <img class="ser_item_img" src="test.png" alt="i">
+                                            <span class="ser_item_info">
+                                                <span class="ser_item_badge">
+                                                    <span class="card__flag" aria-hidden="true"></span>
+                                                    <span>Made in Italy</span>
+                                                </span>
+                                                <span class="ser_item_title">Встроенный пылесос TUBO DYNAMICA</span>
+                                                <span class="ser_item_meta">TD23, 300 м²</span>
+                                                <span class="ser_item_prices">
+                                                    <span class="ser_item_price_label">Цена</span>
+                                                    <span class="ser_item_price_row">
+                                                        <span class="ser_item_price_new"><span
+                                                                class="ser_item_price_value">299 000</span><span
+                                                                class="ser_item_price_currency">₽</span></span>
+                                                        <span class="ser_item_price_old"><span
+                                                                class="ser_item_price_value">150 000</span><span
+                                                                class="ser_item_price_currency">₽</span></span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="header-action --stack" href="#">
+                                <svg class="ic" aria-hidden="true">
+                                    <use xlink:href="imgs/ic.svg#buscet"></use>
+                                </svg>
+                                <span class="header-action-caption">Корзина</span>
+                            </a>
+                            <a class="header-action --stack" href="#">
+                                <svg class="ic" aria-hidden="true">
+                                    <use xlink:href="imgs/ic.svg#heart"></use>
+                                </svg>
+                                <span class="header-action-caption">Избранное</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Мобильный: faq-mob.png -->
+            <div class="header-mobile">
+                <div class="header-mobile-bar header-mobile-bar--contacts">
+                    <a class="header-mobile-phone" href="tel:+79309778929">
+                        <svg class="ic" aria-hidden="true">
+                            <use xlink:href="imgs/ic.svg#phone"></use>
+                        </svg> +7 930-977-89-29
+                    </a>
+                    <div class="header-mobile-messengers">
+                        <a href="https://t.me/" class="header-messenger" aria-label="Telegram" target="_blank">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#tg"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="header-messenger" aria-label="max">
+                            <img src="imgs/sprite/max.svg" alt="max" class="ic">
+                        </a>
+                    </div>
+                    <a class="header-mobile-phone" href="tel:+78007750176">
+                        <svg class="ic" aria-hidden="true">
+                            <use xlink:href="imgs/ic.svg#phone"></use>
+                        </svg> 8 800-775-01-76
+                    </a>
+                </div>
+                <div class="header-mobile-bar header-mobile-bar--nav">
+                    <div class="header-mobile-side header-mobile-side--left">
+                        <button type="button" class="header-icon-btn" id="mobile-nav-toggle">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#burger"></use>
+                            </svg>
+                        </button>
+                        <a href="#" class="header-icon-btn" aria-label="Поиск">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#search"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <a class="header-mobile-brand" href="/">
+                        <img src="imgs/logo.svg" alt="i">
+                    </a>
+                    <div class="header-mobile-side header-mobile-side--right">
+                        <a href="#" class="header-icon-btn" aria-label="Избранное">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#heart"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="header-icon-btn" aria-label="Корзина">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#buscet"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Десктоп: menu-catalog.png -->
+        <div class="catalog-mega" id="catalog-mega">
+            <div class="container catalog-mega__inner">
+                <div class="catF">
+                    <div class="catalog-mega__col catalog-mega__col--cats">
+                        <ul class="catalog-mega__cat-list" role="tablist">
+                            <li><a href="#" class="catalog-mega__cat has-submenu" data-mega-panel="mega-p1">Встроенные
+                                    пылесосы</a></li>
+                            <li><a href="#" class="catalog-mega__cat has-submenu" data-mega-panel="mega-p2">Монтажные
+                                    комплекты</a></li>
+                            <li><a href="#" class="catalog-mega__cat">Монтажные материалы</a></li>
+                            <li><a href="#" class="catalog-mega__cat">Пневмозетки</a></li>
+                            <li><a href="#" class="catalog-mega__cat">Шланги и насадки</a></li>
+                            <li><a href="#" class="catalog-mega__cat">Фильтры и мешки</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog-mega__col catalog-mega__col--subs">
+                        <div id="mega-p1" class="catalog-mega__panel">
+                            <p class="catalog-mega__subs-head">Встроенные пылесосы</p>
+                            <ul class="catalog-mega__subs-list">
+                                <li><a href="#">TUBO DYNAMICA</a></li>
+                                <li><a href="#">TUBO Unica UB</a></li>
+                                <li><a href="#">STUDIO</a></li>
+                                <li><a href="#">TUBO QB</a></li>
+                                <li><a href="#">PRIME</a></li>
+                                <li><a href="#">TUBO PERFETTO INOX APF</a></li>
+                                <li><a href="#">TUBO PERFETTO APF</a></li>
+                                <li><a href="#">TUBO PERFETTO</a></li>
+                                <li><a href="#">TUBO CLASSIC</a></li>
+                            </ul>
+                        </div>
+                        <div id="mega-p2" class="catalog-mega__panel" role="tabpanel" hidden>
+                            <p class="catalog-mega__subs-head">Монтажные комплекты</p>
+                            <ul class="catalog-mega__subs-list">
+                                <li><a href="#">Комплект для квартиры</a></li>
+                                <li><a href="#">Комплект для дома</a></li>
+                                <li><a href="#">Расширения и опции</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Мобилка: menu-mob.png -->
+        <div class="mobile-drawer mobile-drawer--nav" id="mobile-nav-drawer">
+            <div class="header-mobile-catalog-wrap megaCat">
+                <button class="catalog-btn catalog-btn--mobile" type="button" id="mobile-catalog-toggle">
+                    <span class="catalog-btn-burger"></span>
+                    <span class="catalog-btn-text">Каталог</span>
+                    <span class="catalog-btn-arrow">›</span>
+                </button>
+            </div>
+
+            <div class="mobile-catalog-panel catBody">
+                <div class="mobile-catalog-panel__body">
+                    <details class="mobile-catalog-acc">
+                        <summary class="mobile-catalog-acc__summary">
+                            › Встроенные пылесосы
+                        </summary>
+                        <ul class="mobile-catalog-acc__list">
+                            <li><a href="#">TUBO DYNAMICA</a></li>
+                            <li><a href="#">TUBO Unica UB</a></li>
+                            <li><a href="#">STUDIO</a></li>
+                            <li><a href="#">TUBO QB</a></li>
+                            <li><a href="#">PRIME</a></li>
+                            <li><a href="#">TUBO PERFETTO INOX APF</a></li>
+                            <li><a href="#">TUBO PERFETTO APF</a></li>
+                            <li><a href="#">TUBO PERFETTO</a></li>
+                            <li><a href="#">TUBO CLASSIC</a></li>
+                            <li><a href="#">TUBO PERFETTO INOX APF</a></li>
+                            <li><a href="#">TUBO PERFETTO APF</a></li>
+                            <li><a href="#">TUBO PERFETTO</a></li>
+                            <li><a href="#">TUBO CLASSIC</a></li>
+                        </ul>
+                    </details>
+                    <details class="mobile-catalog-acc">
+                        <summary class="mobile-catalog-acc__summary">
+                            › Монтажные комплекты
+                        </summary>
+                        <ul class="mobile-catalog-acc__list">
+                            <li><a href="#">Для квартиры</a></li>
+                            <li><a href="#">Для дома</a></li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+            <div class="mobile-drawer__scroll">
+                <p class="mobile-drawer__section-title"><span>›</span> Меню</p>
+                <nav class="mobile-nav-list">
+                    <a class="mobile-nav-list__link" href="#">О компании</a>
+                    <a class="mobile-nav-list__link" href="#">Акции</a>
+                    <a class="mobile-nav-list__link" href="#">Технологии</a>
+                    <a class="mobile-nav-list__link" href="#">Новости</a>
+                    <a class="mobile-nav-list__link" href="faq.php">FAQ</a>
+                    <a class="mobile-nav-list__link" href="#">Доставка</a>
+                    <a class="mobile-nav-list__link" href="#">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hits">
+            <div class="container hits__inner">
+                <div class="headline">
+                    <h2 class="headline-title headline-line">Хиты продаж</h2>
+                    <a href="#" class="btn btn--outline btn--lg lg-show">
+                        <span><b>Большой</b> каталог</span>
+                        <svg class="ic" aria-hidden="true">
+                            <use xlink:href="imgs/ic.svg#arrow-top-right"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="hits__slider">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="card__badge">
+                            <span class="card__flag" aria-hidden="true"></span>
+                            <span>Made in Italy</span>
+                        </div>
+                        <img class="card__img" src="imgs/hits/p1.png" alt="">
+                        <h3 class="card__title">Встроенный пылесос TUBO DYNAMICA TD23, 300 м²</h3>
+                        <div class="card__price card__price--v2">
+                            <div class="search_price_hit_block"> Цена 299 000 ₽
+                                <div class="search_price_hit_block__hit">
+                                    <img src="imgs/sprite/hot.svg" alt="hot" class="ic" aria-hidden="true">
+                                    <span class="search_hit__text">Топ <br>продаж</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="card__quick" href="#">Быстрый заказ</a>
+                        <a class="btn btn--buy btn--icon" href="#">Купить
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#cart"></use>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="card__badge">
+                            <span class="card__flag" aria-hidden="true"></span>
+                            <span>Made in Italy</span>
+                        </div>
+                        <img class="card__img" src="imgs/hits/p2.png" alt="">
+                        <h3 class="card__title">Встроенный (центральный) пылесос TUBO Unica UX1, 120 м²</h3>
+                        <div class="card__price card__price--v2">
+                            <div class="search_price_hit_block"> Цена 89 000 ₽
+                                <div class="search_price_hit_block__hit">
+                                    <img src="imgs/sprite/hot.svg" alt="hot" class="ic" aria-hidden="true">
+                                    <span class="search_hit__text">Топ <br>продаж</span>
+                                </div>
+                            </div>
+                            <div class="search_price_old">Старая цена 150 000 ₽</div>
+                        </div>
+                        <a class="card__quick" href="#">Быстрый заказ</a>
+                        <a class="btn btn--buy btn--icon" href="#">Осталось мало
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#cart"></use>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="card__badge">
+                            <span class="card__flag" aria-hidden="true"></span>
+                            <span>Made in Italy</span>
+                        </div>
+                        <img class="card__img" src="imgs/hits/p3.png" alt="">
+                        <h3 class="card__title">Робот-пылесос LASER Tubo Robo с комплектом инсталляции со станцией
+                            самоочистки</h3>
+                        <div class="card__price card__price--v2">
+                            <div class="search_price_hit_block"> Цена 124 000 ₽
+                                <div class="search_price_hit_block__hit">
+                                    <img src="imgs/sprite/hot.svg" alt="hot" class="ic" aria-hidden="true">
+                                    <span class="search_hit__text">Топ <br>продаж</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="card__quick" href="#">Быстрый заказ</a>
+                        <a class="btn btn--buy btn--icon" href="#">Заказать сейчас
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#cart"></use>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="card">
+                        <div class="card__badge">
+                            <span class="card__flag" aria-hidden="true"></span>
+                            <span>Made in Italy</span>
+                        </div>
+                        <img class="card__img" src="imgs/hits/p4.png" alt="">
+                        <h3 class="card__title">Встроенный пылесос AERTECNICA PRIME</h3>
+                        <div class="card__price card__price--v2">
+                            <div class="search_price_hit_block"> Цена 26 000 ₽
+                                <div class="search_price_hit_block__hit">
+                                    <img src="imgs/sprite/hot.svg" alt="hot" class="ic" aria-hidden="true">
+                                    <span class="search_hit__text">Топ <br>продаж</span>
+                                </div>
+                            </div>
+                            <div class="search_price_old">Старая цена 68 000.00 ₽</div>
+                        </div>
+                        <a class="card__quick" href="#">Быстрый заказ</a>
+                        <a class="btn btn--buy btn--icon" href="#">Купить
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#cart"></use>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+
+                <a href="#" class="btn btn--outline btn--lg lg-hide">
                     <span><b>Большой</b> каталог</span>
                     <svg class="ic" aria-hidden="true">
                         <use xlink:href="imgs/ic.svg#arrow-top-right"></use>
                     </svg>
                 </a>
+
+                <div class="hits-promo">
+                    <div class="hits-promo__content">
+                        <h3 class="hits-promo__title"><b>Не переплачивайте</b> за решения «на потом»</h3>
+                        <p class="hits-promo__text">
+                            Напишите в
+                            <a href="#" class="tg-chip">
+                                <svg class="ic" aria-hidden="true">
+                                    <use xlink:href="imgs/ic.svg#tg"></use>
+                                </svg>
+                                Telegram
+                            </a>
+                            — подберём систему под ваш дом и сделаем цену приятной.
+                        </p>
+                    </div>
+                    <a href="#" class="btn btn--orange btn--md">Получить расчет</a>
+                </div>
             </div>
+        </section>
 
-            <div class="hits__slider">
-                <!-- Card 1 -->
-                <article class="card">
-                    <div class="card__badge">
-                        <span class="card__flag" aria-hidden="true"></span>
-                        <span>Made in Italy</span>
-                    </div>
-                    <img class="card__img" src="imgs/hits/p1.png" alt="">
-                    <h3 class="card__title">Встроенный пылесос TUBO DYNAMICA TD23, 300 м²</h3>
-                    <div class="card__price card__price--v2">
-                        <div class="search_price_hit_block"> Цена 299 000 ₽
-                            <div class="search_price_hit_block__hit">
-                                <img src="imgs/sprite/hot.svg" alt="hot" class="ic" aria-hidden="true">
-                                <span class="search_hit__text">Топ <br>продаж</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="card__quick" href="#">Быстрый заказ</a>
-                    <a class="btn btn--buy btn--icon" href="#">Купить
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#cart"></use>
-                        </svg>
+        <section class="video-reviews">
+            <div class="container">
+                <div class="headline">
+                    <h2 class="headline-title headline-line">Видеоотзывы</h2>
+                    <a href="#" class="btn btn--outline btn--lg">
+                        <span><b>Узнайте</b> о нас</span>
                     </a>
-                </article>
+                </div>
 
-                <!-- Card 2 -->
-                <article class="card">
-                    <div class="card__badge">
-                        <span class="card__flag" aria-hidden="true"></span>
-                        <span>Made in Italy</span>
-                    </div>
-                    <img class="card__img" src="imgs/hits/p2.png" alt="">
-                    <h3 class="card__title">Встроенный (центральный) пылесос TUBO Unica UX1, 120 м²</h3>
-                    <div class="card__price card__price--v2">
-                        <div class="search_price_hit_block"> Цена 89 000 ₽
-                            <div class="search_price_hit_block__hit">
-                                <img src="imgs/sprite/hot.svg" alt="hot" class="ic" aria-hidden="true">
-                                <span class="search_hit__text">Топ <br>продаж</span>
-                            </div>
+                <div class="video-reviews__grid">
+                    <a class="video-card" href="test.mp4" data-fancybox="reviews">
+                        <div class="video-card__media">
+                            <img class="video-card__poster" src="imgs/video/v1.jpg" alt="Видео отзыв 1" loading="lazy">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#play"></use>
+                            </svg>
                         </div>
-                        <div class="search_price_old">Старая цена 150 000 ₽</div>
-                    </div>
-                    <a class="card__quick" href="#">Быстрый заказ</a>
-                    <a class="btn btn--buy btn--icon" href="#">Осталось мало
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#cart"></use>
-                        </svg>
+                        <p class="video-card__title">
+                            <b>12 лет</b> со встроенным <br> пылесосом – реальный отзыв!
+                        </p>
                     </a>
-                </article>
 
-                <!-- Card 3 -->
-                <article class="card">
-                    <div class="card__badge">
-                        <span class="card__flag" aria-hidden="true"></span>
-                        <span>Made in Italy</span>
-                    </div>
-                    <img class="card__img" src="imgs/hits/p3.png" alt="">
-                    <h3 class="card__title">Робот-пылесос LASER Tubo Robo с комплектом инсталляции со станцией
-                        самоочистки</h3>
-                    <div class="card__price card__price--v2">
-                        <div class="search_price_hit_block"> Цена 124 000 ₽
-                            <div class="search_price_hit_block__hit">
-                                <img src="imgs/sprite/hot.svg" alt="hot" class="ic" aria-hidden="true">
-                                <span class="search_hit__text">Топ <br>продаж</span>
-                            </div>
+                    <a class="video-card" href="test.mp4" data-fancybox="reviews">
+                        <div class="video-card__media">
+                            <img class="video-card__poster" src="imgs/video/v2.jpg" alt="Видео отзыв 2" loading="lazy">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#play"></use>
+                            </svg>
                         </div>
-                    </div>
-                    <a class="card__quick" href="#">Быстрый заказ</a>
-                    <a class="btn btn--buy btn--icon" href="#">Заказать сейчас
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#cart"></use>
-                        </svg>
+                        <p class="video-card__title">
+                            <b>Современная система</b> пылеудаления <br> – отзыв пользователя
+                        </p>
                     </a>
-                </article>
-
-                <!-- Card 4 -->
-                <article class="card">
-                    <div class="card__badge">
-                        <span class="card__flag" aria-hidden="true"></span>
-                        <span>Made in Italy</span>
-                    </div>
-                    <img class="card__img" src="imgs/hits/p4.png" alt="">
-                    <h3 class="card__title">Встроенный пылесос AERTECNICA PRIME</h3>
-                    <div class="card__price card__price--v2">
-                        <div class="search_price_hit_block"> Цена 26 000 ₽
-                            <div class="search_price_hit_block__hit">
-                                <img src="imgs/sprite/hot.svg" alt="hot" class="ic" aria-hidden="true">
-                                <span class="search_hit__text">Топ <br>продаж</span>
-                            </div>
-                        </div>
-                        <div class="search_price_old">Старая цена 68 000.00 ₽</div>
-                    </div>
-                    <a class="card__quick" href="#">Быстрый заказ</a>
-                    <a class="btn btn--buy btn--icon" href="#">Купить
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#cart"></use>
-                        </svg>
-                    </a>
-                </article>
+                </div>
             </div>
+        </section>
 
-            <a href="#" class="btn btn--outline btn--lg lg-hide">
-                <span><b>Большой</b> каталог</span>
-                <svg class="ic" aria-hidden="true">
-                    <use xlink:href="imgs/ic.svg#arrow-top-right"></use>
-                </svg>
-            </a>
+        <section class="about">
+            <div class="container about__inner">
+                <div class="about__row">
+                    <div class="about__text">
+                        <svg class="ic" aria-hidden="true">
+                            <use xlink:href="imgs/ic.svg#arrow-down"></use>
+                        </svg>
+                        <h2 class="about__title">Уже более 40 лет<br>компания Aertecnica</h2>
+                        <p class="about__desc">
+                            (Аэротехника) день за днем заботится о Вашем здоровье, разрабатывая и предлагая уникальные
+                            технологичные
+                            <a href="https://www.aertecnica-tubo.ru/sistema-tsentralnogo-pyleudaleniya/" target="_blank"
+                                rel="noopener">системы центрального пылеудаления</a>.
+                            Это необычайно эффективные встроенные пылесосы, исключающие повторную циркуляцию уже
+                            загрязненного воздуха и обеспечивающие чистоту и уют в любом помещении.
+                        </p>
+                    </div>
+                    <a class="about__video" href="test.mp4" data-fancybox="about">
+                        <img class="about__poster" src="imgs/main/about_video.jpg"
+                            alt="Уже более 40 лет компания Aertecnica" loading="lazy">
+                        <svg class="ic" aria-hidden="true">
+                            <use xlink:href="imgs/ic.svg#play"></use>
+                        </svg>
+                    </a>
+                </div>
 
-            <div class="hits-promo">
-                <div class="hits-promo__content">
-                    <h3 class="hits-promo__title"><b>Не переплачивайте</b> за решения «на потом»</h3>
-                    <p class="hits-promo__text">
-                        Напишите в
-                        <a href="#" class="tg-chip">
+                <div class="about__row about__row--reverse">
+                    <div class="about__text">
+                        <svg class="ic" aria-hidden="true">
+                            <use xlink:href="imgs/ic.svg#arrow-down"></use>
+                        </svg>
+                        <h2 class="about__title">Максимальная<br>интеграция</h2>
+                        <ul class="about__list">
+                            <li>Система PRATICO функциональна и обладает малым весом</li>
+                            <li>Благодаря возможности покраски под цвет стен, система PRATICO присутствует в помещениях
+                                едва заметно.</li>
+                            <li>Особенностью системы является воплощение стиля и практичности</li>
+                        </ul>
+                    </div>
+                    <a class="about__video" href="test.mp4" data-fancybox="about">
+                        <img class="about__poster" src="imgs/main/about_video.jpg" alt="Максимальная интеграция"
+                            loading="lazy">
+                        <svg class="ic" aria-hidden="true">
+                            <use xlink:href="imgs/ic.svg#play"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="about__row about__row--cta">
+                    <div class="about-cta">
+                        <h3 class="about-cta__title"><b>Заполните форму</b> и получите замеры и расчеты</h3>
+                        <p class="about-cta__lead">Если устали от фальшивых решений пишите нам.</p>
+
+                        <div class="about-cta__offer">
+                            <span class="about-cta__tag" aria-hidden="true">−20%</span>
+                            <div class="about-cta__offer-text">
+                                <p class="about-cta__offer-title">Пришлем индивидуальное предложение</p>
+                                <p class="about-cta__offer-sub">
+                                    со скидкой на
+                                    <span class="about-cta__socials">
+                                        <a href="#" class="about-cta__social --tg" aria-label="Telegram">
+                                            <svg class="ic" aria-hidden="true">
+                                                <use xlink:href="imgs/ic.svg#tg"></use>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="about-cta__social --max" aria-label="max">
+                                            <img src="imgs/sprite/max.svg" class="ic" alt="max">
+                                        </a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="about-form">
+                        <input type="text" required name="name" placeholder="Ваше имя">
+                        <input type="email" required name="email" placeholder="Электронная почта">
+                        <label class="inp_wrap">
+                            <select class="inp_wrap-child">
+                                <option>🇷🇺 +7</option>
+                                <option>🇰🇿 +7</option>
+                            </select>
+                            <input type="tel" name="phone" placeholder="(999) 999-99-99">
+                        </label>
+                        <div class="checkbox">
+                            <input type="checkbox" checked required>
+                            <label>Я даю согласие на обработку своих персональных данных</label>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--md">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="headline headline--start">
+                    <h2 class="headline-title">
+                        <span class="headline-line">Преимущества</span>
+                        встроенных пылесосов
+                    </h2>
+                    <a href="#" class="btn btn--outline btn--lg">
+                        <span>от <b>Aertecnica</b></span>
+                    </a>
+                </div>
+
+                <div class="features__body">
+                    <div class="features__media">
+                        <img src="imgs/main/features.jpg" alt="i" loading="lazy">
+                    </div>
+
+                    <ul class="features__grid">
+                        <li class="feature">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#feat-clean"></use>
+                            </svg>
+                            <h3 class="feature__title">100% удаление пыли, аллергенов и грязи</h3>
+                            <p class="feature__text">Больше никакой возни с проводами и тяжелыми пылесосами.</p>
+                        </li>
+
+                        <li class="feature">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#feat-time"></use>
+                            </svg>
+                            <h3 class="feature__title">Экономия времени</h3>
+                            <p class="feature__text">Уборка стала быстрее в среднем на&nbsp;30%. Вы больше не тратите
+                                время на таскание неудобного пылесоса.</p>
+                        </li>
+
+                        <li class="feature">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#feat-quality"></use>
+                            </svg>
+                            <h3 class="feature__title">Долговечность</h3>
+                            <p class="feature__text">Срок службы встроенных пылесосов AERTECNICA более 20&nbsp;лет. Срок
+                                службы инсталляции равен сроку службы всего здания.</p>
+                        </li>
+
+                        <li class="feature">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#feat-quiet"></use>
+                            </svg>
+                            <h3 class="feature__title">Тихая работа</h3>
+                            <p class="feature__text">Вы можете легко убираться даже ночью, ведь встроенный пылесос
+                                находится в подсобном помещении.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-form">
+            <div class="container">
+                <div class="cta-form__head">
+                    <h2 class="cta-form__title">Заполните форму <span>и получите замеры и расчеты</span></h2>
+                    <p class="cta-form__text">Ваш дом достоин премиальной чистоты – звоните! <a href="tel:88007750176">8
+                            (800) 775-01-76</a></p>
+                </div>
+
+                <form class="cta-form__form">
+                    <div class="cta-form__row">
+                        <input type="text" required name="name" placeholder="Ваше имя">
+                        <input type="email" required name="email" placeholder="Электронная почта">
+                        <label class="inp_wrap">
+                            <select class="inp_wrap-child">
+                                <option>🇷🇺 +7</option>
+                                <option>🇰🇿 +7</option>
+                            </select>
+                            <input type="tel" name="phone" placeholder="(999) 999-99-99">
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" required>
+                        <label>Я даю согласие на обработку своих персональных данных</label>
+                    </div>
+                    <button type="submit" class="btn btn--orange btn--md">Отправить</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="main_faq">
+            <div class="container">
+                <div class="headline">
+                    <h2 class="headline-title">
+                        Часто задаваемые <br> вопросы про встроенные
+                        <span class="headline-line">пылесосы</span>
+                    </h2>
+                    <a href="#" class="btn btn--outline btn--lg">
+                        <span><b>Узнайте</b> о нас</span>
+                    </a>
+                </div>
+
+                <div class="main_faq__grid">
+                    <div class="main_faq__item">
+                        <div class="main_faq__question">
+                            <h3 class="main_faq__heading">
+                                <span>У меня маленькая квартира, где установить встроенный пылесос?</span>
+                                <svg class="ic" aria-hidden="true">
+                                    <use xlink:href="imgs/ic.svg#plus"></use>
+                                </svg>
+                            </h3>
+                            <p class="main_faq__answer">
+                                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Гор
+                                маленький, курсивных над вершину рыбного буквоград всемогущая текст грустный.
+                            </p>
+                        </div>
+                        <img src="imgs/main/faq1.jpg" alt="i" loading="lazy" class="main_faq-img">
+                    </div>
+
+                    <div class="main_faq__item">
+                        <div class="main_faq__question">
+                            <h3 class="main_faq__heading">
+                                <span>Беспроводные пылесосы и роботы-пылесосы против встроенных пылесосов
+                                    Aertecnica</span>
+                                <svg class="ic" aria-hidden="true">
+                                    <use xlink:href="imgs/ic.svg#plus"></use>
+                                </svg>
+                            </h3>
+                            <p class="main_faq__answer">
+                                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Гор
+                                маленький, курсивных над вершину рыбного буквоград всемогущая текст грустный.
+                            </p>
+                        </div>
+                        <img src="imgs/main/faq2.jpg" alt="i" loading="lazy" class="main_faq-img">
+                    </div>
+
+                    <div class="main_faq__item">
+                        <div class="main_faq__question">
+                            <h3 class="main_faq__heading">
+                                <span>Куда собирается весь мусор?</span>
+                                <svg class="ic" aria-hidden="true">
+                                    <use xlink:href="imgs/ic.svg#plus"></use>
+                                </svg>
+                            </h3>
+                            <p class="main_faq__answer">
+                                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Гор
+                                маленький, курсивных над вершину рыбного буквоград всемогущая текст грустный.
+                            </p>
+                        </div>
+                        <img src="imgs/main/faq3.jpg" alt="i" loading="lazy" class="main_faq-img">
+                    </div>
+
+                    <div class="main_faq__item">
+                        <div class="main_faq__question">
+                            <h3 class="main_faq__heading">
+                                <span>Еще одно заблуждение: встроенный пылесос - рассадник для тараканов?</span>
+                                <svg class="ic" aria-hidden="true">
+                                    <use xlink:href="imgs/ic.svg#plus"></use>
+                                </svg>
+                            </h3>
+                            <p class="main_faq__answer">
+                                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Гор
+                                маленький, курсивных над вершину рыбного буквоград всемогущая текст грустный.
+                            </p>
+                        </div>
+
+                        <img src="imgs/main/faq4.jpg" alt="i" loading="lazy" class="main_faq-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main_benefit">
+            <div class="container main_benefit__inner">
+                <div class="main_benefit__content">
+                    <h2 class="headline-title">
+                        Кому будут полезны системы встроенного централизованного пылеудаления AERTECNICA?
+                    </h2>
+                    <a href="#" class="btn btn--white btn--md md-hide">Получить консультацию</a>
+                </div>
+
+                <ul class="main_benefit__list">
+                    <li>
+                        <img src="imgs/main/benefit/ic-1.svg" alt="i" class="ic" loading="lazy">
+                        <span class="main_benefit__title">
+                            Для частных домов <br>
+                            и элитных квартир
+                        </span>
+                        <span class="main_benefit__text">
+                            Больше не нужно таскать пылесос по этажам.
+                        </span>
+                    </li>
+                    <li>
+                        <img src="imgs/main/benefit/ic-2.svg" alt="i" class="ic" loading="lazy">
+                        <span class="main_benefit__title">
+                            Для архитекторов, <br> дизайнеров и элитных девелоперов
+                        </span>
+                        <span class="main_benefit__text">
+                            Убирается скрыто, не портит интерьер.
+                        </span>
+                    </li>
+                    <li>
+                        <img src="imgs/main/benefit/ic-3.svg" alt="i" class="ic" loading="lazy">
+                        <span class="main_benefit__title">
+                            Для отелей <br>
+                            и бизнесов
+                        </span>
+                        <span class="main_benefit__text">
+                            Экономит расходы на клининг.
+                        </span>
+                    </li>
+                </ul>
+
+                <a href="#" class="btn btn--white btn--md md-show">Получить консультацию</a>
+            </div>
+        </section>
+
+        <section class="main_cunsolt --overflow">
+            <div class="container main_cunsolt__inner">
+                <div class="main_cunsolt__content">
+                    <h2 class="main_cunsolt__title">Нужна консультация?</h2>
+                    <p class="main_cunsolt__text">
+                        Ваш дом достоин премиальной чистоты – звоните! <a href="tel:88007750176">8 (800) 775-01-76</a>
+                    </p>
+
+                    <div class="main_cunsolt__socials">
+                        <a href="#" class="main_cunsolt__social --tg" aria-label="Telegram">
                             <svg class="ic" aria-hidden="true">
                                 <use xlink:href="imgs/ic.svg#tg"></use>
                             </svg>
-                            Telegram
                         </a>
-                        — подберём систему под ваш дом и сделаем цену приятной.
-                    </p>
-                </div>
-                <a href="#" class="btn btn--orange btn--md">Получить расчет</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="video-reviews">
-        <div class="container">
-            <div class="headline">
-                <h2 class="headline-title headline-line">Видеоотзывы</h2>
-                <a href="#" class="btn btn--outline btn--lg">
-                    <span><b>Узнайте</b> о нас</span>
-                </a>
-            </div>
-
-            <div class="video-reviews__grid">
-                <a class="video-card" href="test.mp4" data-fancybox="reviews">
-                    <div class="video-card__media">
-                        <img class="video-card__poster" src="imgs/video/v1.jpg" alt="Видео отзыв 1" loading="lazy">
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#play"></use>
-                        </svg>
-                    </div>
-                    <p class="video-card__title">
-                        <b>12 лет</b> со встроенным <br> пылесосом – реальный отзыв!
-                    </p>
-                </a>
-
-                <a class="video-card" href="test.mp4" data-fancybox="reviews">
-                    <div class="video-card__media">
-                        <img class="video-card__poster" src="imgs/video/v2.jpg" alt="Видео отзыв 2" loading="lazy">
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#play"></use>
-                        </svg>
-                    </div>
-                    <p class="video-card__title">
-                        <b>Современная система</b> пылеудаления <br> – отзыв пользователя
-                    </p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="about">
-        <div class="container about__inner">
-            <div class="about__row">
-                <div class="about__text">
-                    <svg class="ic" aria-hidden="true">
-                        <use xlink:href="imgs/ic.svg#arrow-down"></use>
-                    </svg>
-                    <h2 class="about__title">Уже более 40 лет<br>компания Aertecnica</h2>
-                    <p class="about__desc">
-                        (Аэротехника) день за днем заботится о Вашем здоровье, разрабатывая и предлагая уникальные
-                        технологичные
-                        <a href="https://www.aertecnica-tubo.ru/sistema-tsentralnogo-pyleudaleniya/" target="_blank"
-                            rel="noopener">системы центрального пылеудаления</a>.
-                        Это необычайно эффективные встроенные пылесосы, исключающие повторную циркуляцию уже
-                        загрязненного воздуха и обеспечивающие чистоту и уют в любом помещении.
-                    </p>
-                </div>
-                <a class="about__video" href="test.mp4" data-fancybox="about">
-                    <img class="about__poster" src="imgs/main/about_video.jpg"
-                        alt="Уже более 40 лет компания Aertecnica" loading="lazy">
-                    <svg class="ic" aria-hidden="true">
-                        <use xlink:href="imgs/ic.svg#play"></use>
-                    </svg>
-                </a>
-            </div>
-
-            <div class="about__row about__row--reverse">
-                <div class="about__text">
-                    <svg class="ic" aria-hidden="true">
-                        <use xlink:href="imgs/ic.svg#arrow-down"></use>
-                    </svg>
-                    <h2 class="about__title">Максимальная<br>интеграция</h2>
-                    <ul class="about__list">
-                        <li>Система PRATICO функциональна и обладает малым весом</li>
-                        <li>Благодаря возможности покраски под цвет стен, система PRATICO присутствует в помещениях
-                            едва заметно.</li>
-                        <li>Особенностью системы является воплощение стиля и практичности</li>
-                    </ul>
-                </div>
-                <a class="about__video" href="test.mp4" data-fancybox="about">
-                    <img class="about__poster" src="imgs/main/about_video.jpg" alt="Максимальная интеграция"
-                        loading="lazy">
-                    <svg class="ic" aria-hidden="true">
-                        <use xlink:href="imgs/ic.svg#play"></use>
-                    </svg>
-                </a>
-            </div>
-
-            <div class="about__row about__row--cta">
-                <div class="about-cta">
-                    <h3 class="about-cta__title"><b>Заполните форму</b> и получите замеры и расчеты</h3>
-                    <p class="about-cta__lead">Если устали от фальшивых решений пишите нам.</p>
-
-                    <div class="about-cta__offer">
-                        <span class="about-cta__tag" aria-hidden="true">−20%</span>
-                        <div class="about-cta__offer-text">
-                            <p class="about-cta__offer-title">Пришлем индивидуальное предложение</p>
-                            <p class="about-cta__offer-sub">
-                                со скидкой на
-                                <span class="about-cta__socials">
-                                    <a href="#" class="about-cta__social --tg" aria-label="Telegram">
-                                        <svg class="ic" aria-hidden="true">
-                                            <use xlink:href="imgs/ic.svg#tg"></use>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="about-cta__social --max" aria-label="max">
-                                        <img src="imgs/sprite/max.svg" class="ic" alt="max">
-                                    </a>
-                                </span>
-                            </p>
-                        </div>
+                        <a href="#" class="main_cunsolt__social --max" aria-label="max">
+                            <img src="imgs/sprite/max.svg" class="ic" alt="max">
+                        </a>
                     </div>
                 </div>
 
-                <form class="about-form">
+                <form class="main_cunsolt__form">
                     <input type="text" required name="name" placeholder="Ваше имя">
                     <input type="email" required name="email" placeholder="Электронная почта">
                     <label class="inp_wrap">
@@ -274,605 +901,466 @@
                         <input type="checkbox" checked required>
                         <label>Я даю согласие на обработку своих персональных данных</label>
                     </div>
-                    <button type="submit" class="btn btn--primary btn--md">Отправить</button>
+                    <button type="submit" class="btn btn--primary btn--md">Получить консультацию</button>
                 </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="features">
-        <div class="container">
-            <div class="headline headline--start">
-                <h2 class="headline-title">
-                    <span class="headline-line">Преимущества</span>
-                    встроенных пылесосов
-                </h2>
-                <a href="#" class="btn btn--outline btn--lg">
-                    <span>от <b>Aertecnica</b></span>
-                </a>
+        <section class="main_objects">
+            <div class="container">
+                <h2 class="headline-title">У нас более 10 000 объектов, включая работы для звёзд шоу-бизнеса</h2>
+
+                <div class="main_objects__slider">
+                    <div class="obj">
+                        <img src="imgs/obj-1.jpg" alt="i" loading="lazy" class="obj__bg">
+                        <p class="obj__title">Нонна Гришаева: "Спасибо за потрясающий встроенный пылесос Aertecnica."
+                        </p>
+                    </div>
+                    <div class="obj">
+                        <img src="imgs/obj-2.jpg" alt="i" loading="lazy" class="obj__bg">
+                        <p class="obj__title">«Ремонт по-честному» на канале «РЕН ТВ» установила встроенный пылесос
+                            Aertecnica Tubo с системой Pratico в квартире Павла Прилучного.</p>
+                    </div>
+                    <div class="obj">
+                        <img src="imgs/obj-3.jpg" alt="i" loading="lazy" class="obj__bg">
+                        <p class="obj__title">Жилой комплекс на Нежинской</p>
+                    </div>
+                    <div class="obj">
+                        <img src="imgs/obj-3.jpg" alt="i" loading="lazy" class="obj__bg">
+                        <p class="obj__title">Жилой комплекс на Нежинской</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="features__body">
-                <div class="features__media">
-                    <img src="imgs/main/features.jpg" alt="i" loading="lazy">
+        <section class="main_steps">
+            <div class="container">
+                <div class="headline">
+                    <h2 class="headline-title">
+                        3 шага — и пыль
+                        <span class="headline-line">исчезнет навсегда:</span>
+                    </h2>
+                    <a href="#" class="btn btn--outline btn--lg">
+                        <span><b>консультация, <br> проект,</b> монтаж!</span>
+                    </a>
                 </div>
 
-                <ul class="features__grid">
-                    <li class="feature">
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#feat-clean"></use>
-                        </svg>
-                        <h3 class="feature__title">100% удаление пыли, аллергенов и грязи</h3>
-                        <p class="feature__text">Больше никакой возни с проводами и тяжелыми пылесосами.</p>
+                <ol class="main_steps-list">
+                    <li class="main_steps-item">
+                        <img src="imgs/main/steps3.jpg" alt="i" class="main_steps-img" loading="lazy">
+
+                        <span class="main_steps-text">
+                            Получить консультацию, позвонив
+                            по бесплатному номеру <a href="tel:88007750176">8 (800) 775-01-76</a>
+                        </span>
+                    </li>
+                    <li class="main_steps-item">
+                        <img src="imgs/main/steps1.jpg" alt="i" class="main_steps-img" loading="lazy">
+
+                        <span class="main_steps-text">
+                            Заказать бесплатный проект системы централизованного пылеудаления
+                        </span>
+                    </li>
+                    <li class="main_steps-item">
+                        <img src="imgs/main/steps2.jpg" alt="i" class="main_steps-img" loading="lazy">
+
+                        <span class="main_steps-content">
+                            <span class="main_steps-text">
+                                Заказать монтаж системы <br> централизованного пылеудаления
+                            </span>
+                            <a href="#" class="btn btn--primary btn--md">
+                                <span>Получить консультацию</span>
+                            </a>
+                        </span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="main_aertecnica">
+            <div class="container">
+                <h2 class="headline-title">Aertecnica в цифрах</h2>
+
+                <ul class="main_aertecnica__list">
+                    <li class="aertecnica-stat">
+                        <span class="aertecnica-stat__text">
+                            <span class="aertecnica-stat__num">100+</span>
+                            Представительства более чем в 100 странах мира.
+                        </span>
+                        <img class="aertecnica-stat__icon" src="imgs/main/aertecnica_ic-1.svg" alt="i" loading="lazy">
                     </li>
 
-                    <li class="feature">
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#feat-time"></use>
-                        </svg>
-                        <h3 class="feature__title">Экономия времени</h3>
-                        <p class="feature__text">Уборка стала быстрее в среднем на&nbsp;30%. Вы больше не тратите
-                            время на таскание неудобного пылесоса.</p>
+                    <li class="aertecnica-stat">
+                        <span class="aertecnica-stat__text">
+                            <span class="aertecnica-stat__num">40 лет</span>
+                            Опыт в создании встроенных пылесосов премиум-класса.
+                        </span>
+                        <img class="aertecnica-stat__icon" src="imgs/main/aertecnica_ic-2.svg" alt="i" loading="lazy">
                     </li>
 
-                    <li class="feature">
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#feat-quality"></use>
-                        </svg>
-                        <h3 class="feature__title">Долговечность</h3>
-                        <p class="feature__text">Срок службы встроенных пылесосов AERTECNICA более 20&nbsp;лет. Срок
-                            службы инсталляции равен сроку службы всего здания.</p>
+                    <li class="aertecnica-stat">
+                        <span class="aertecnica-stat__text">
+                            <span class="aertecnica-stat__num">10 000+</span>
+                            Довольных клиентов в России и странах Таможенного Союза.
+                        </span>
+                        <img class="aertecnica-stat__icon" src="imgs/main/aertecnica_ic-3.svg" alt="i" loading="lazy">
                     </li>
 
-                    <li class="feature">
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#feat-quiet"></use>
-                        </svg>
-                        <h3 class="feature__title">Тихая работа</h3>
-                        <p class="feature__text">Вы можете легко убираться даже ночью, ведь встроенный пылесос
-                            находится в подсобном помещении.</p>
+                    <li class="aertecnica-stat">
+                        <span class="aertecnica-stat__text">
+                            <span class="aertecnica-stat__num">2000 год</span>
+                            Открытие официального представительства Aertecnica в России.
+                        </span>
+                        <img class="aertecnica-stat__icon" src="imgs/main/aertecnica_ic-4.svg" alt="i" loading="lazy">
                     </li>
                 </ul>
-            </div>
-        </div>
-    </section>
 
-    <section class="cta-form">
-        <div class="container">
-            <div class="cta-form__head">
-                <h2 class="cta-form__title">Заполните форму <span>и получите замеры и расчеты</span></h2>
-                <p class="cta-form__text">Ваш дом достоин премиальной чистоты – звоните! <a href="tel:88007750176">8
-                        (800) 775-01-76</a></p>
-            </div>
-
-            <form class="cta-form__form">
-                <div class="cta-form__row">
-                    <input type="text" required name="name" placeholder="Ваше имя">
-                    <input type="email" required name="email" placeholder="Электронная почта">
-                    <label class="inp_wrap">
-                        <select class="inp_wrap-child">
-                            <option>🇷🇺 +7</option>
-                            <option>🇰🇿 +7</option>
-                        </select>
-                        <input type="tel" name="phone" placeholder="(999) 999-99-99">
-                    </label>
+                <div class="main_aertecnica__cta">
+                    <p class="main_aertecnica__cta-text">Ещё один встроенный пылесос Aertecnica может появиться у вас
+                        дома.
+                    </p>
+                    <a href="#" class="btn btn--blue btn--md">Заказать AERTECNICA</a>
+                    <img class="main_aertecnica__arrow" src="imgs/main/decor-arrow.svg" alt="i">
                 </div>
-                <div class="checkbox">
-                    <input type="checkbox" required>
-                    <label>Я даю согласие на обработку своих персональных данных</label>
-                </div>
-                <button type="submit" class="btn btn--orange btn--md">Отправить</button>
-            </form>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section class="main_faq">
-        <div class="container">
-            <div class="headline">
+        <section class="main_why">
+            <div class="container">
                 <h2 class="headline-title">
-                    Часто задаваемые <br> вопросы про встроенные
-                    <span class="headline-line">пылесосы</span>
+                    Почему встроенные пылесосы Aertecnica покупают у нас?
                 </h2>
-                <a href="#" class="btn btn--outline btn--lg">
-                    <span><b>Узнайте</b> о нас</span>
-                </a>
-            </div>
 
-            <div class="main_faq__grid">
-                <div class="main_faq__item">
-                    <div class="main_faq__question">
-                        <h3 class="main_faq__heading">
-                            <span>У меня маленькая квартира, где установить встроенный пылесос?</span>
-                            <svg class="ic" aria-hidden="true">
-                                <use xlink:href="imgs/ic.svg#plus"></use>
-                            </svg>
-                        </h3>
-                        <p class="main_faq__answer">
-                            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Гор
-                            маленький, курсивных над вершину рыбного буквоград всемогущая текст грустный.
-                        </p>
+                <ul class="main_why__list">
+                    <li>
+                        <span class="main_why__heading">Официальное представительство в России</span>
+                        <span class="main_why__text">Вы существенно экономите покупая без посредников.</span>
+                        <img src="imgs/main/why/1.svg" alt="i" loading="lazy">
+                        <span class="main_why__chip">Факт 1</span>
+                    </li>
+                    <li>
+                        <span class="main_why__heading">Собственный склад</span>
+                        <span class="main_why__text">Всегда в наличии техника и комплектующие.</span>
+                        <img src="imgs/main/why/2.svg" alt="i" loading="lazy">
+                        <span class="main_why__chip">Факт 2</span>
+                    </li>
+                    <li>
+                        <span class="main_why__heading">Доставка по всей стране</span>
+                        <span class="main_why__text">Быстро отправляем в любой регион</span>
+                        <img src="imgs/main/why/3.svg" alt="i" loading="lazy">
+                        <span class="main_why__chip">Факт 3</span>
+                    </li>
+                    <li>
+                        <span class="main_why__heading">Сертифицированный монтаж</span>
+                        <span class="main_why__text">Устанавливаем системы «под ключ» собственными бригадами.</span>
+                        <img src="imgs/main/why/4.svg" alt="i" loading="lazy">
+                        <span class="main_why__chip">Факт 4</span>
+                    </li>
+                    <li>
+                        <span class="main_why__heading">Проектирование от специалистов Aertecnica</span>
+                        <span class="main_why__text">Наши инженеры прошли обучение на заводе в Италии.</span>
+                        <img src="imgs/main/why/5.svg" alt="i" loading="lazy">
+                        <span class="main_why__chip">Факт 5</span>
+                    </li>
+                    <li>
+                        <span class="main_why__heading">Бесплатный проект системы</span>
+                        <span class="main_why__text">Рассчитаем оптимальное решение именно для вашего объекта.</span>
+                        <img src="imgs/main/why/6.svg" alt="i" loading="lazy">
+                        <span class="main_why__chip">Факт 6</span>
+                    </li>
+                </ul>
+
+                <div class="main_why__row">
+                    <div class="main_why__item">
+                        <h3 class="main_why__item-heading">Официальная гарантия и сервис</h3>
+                        <p class="main_why__text">Поддержка в течение всего срока службы.</p>
+                        <img src="imgs/main/why/8.svg" alt="i" loading="lazy" class="main_why__item-icon">
                     </div>
-                    <img src="imgs/main/faq1.jpg" alt="i" loading="lazy" class="main_faq-img">
-                </div>
-
-                <div class="main_faq__item">
-                    <div class="main_faq__question">
-                        <h3 class="main_faq__heading">
-                            <span>Беспроводные пылесосы и роботы-пылесосы против встроенных пылесосов Aertecnica</span>
-                            <svg class="ic" aria-hidden="true">
-                                <use xlink:href="imgs/ic.svg#plus"></use>
-                            </svg>
+                    <div class="main_why__info">
+                        <h3 class="main_why__info-heading">
+                            Хочешь получить встроенный пылесос Aertecnica <span>бесплатно</span>?
                         </h3>
-                        <p class="main_faq__answer">
-                            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Гор
-                            маленький, курсивных над вершину рыбного буквоград всемогущая текст грустный.
-                        </p>
+                        <a href="#" class="btn btn--blue btn--md">Жми кнопку</a>
+                        <img src="imgs/main/decor-arrow.svg" alt="i" loading="lazy" class="main_why__info-decor">
                     </div>
-                    <img src="imgs/main/faq2.jpg" alt="i" loading="lazy" class="main_faq-img">
-                </div>
-
-                <div class="main_faq__item">
-                    <div class="main_faq__question">
-                        <h3 class="main_faq__heading">
-                            <span>Куда собирается весь мусор?</span>
-                            <svg class="ic" aria-hidden="true">
-                                <use xlink:href="imgs/ic.svg#plus"></use>
-                            </svg>
-                        </h3>
-                        <p class="main_faq__answer">
-                            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Гор
-                            маленький, курсивных над вершину рыбного буквоград всемогущая текст грустный.
-                        </p>
-                    </div>
-                    <img src="imgs/main/faq3.jpg" alt="i" loading="lazy" class="main_faq-img">
-                </div>
-
-                <div class="main_faq__item">
-                    <div class="main_faq__question">
-                        <h3 class="main_faq__heading">
-                            <span>Еще одно заблуждение: встроенный пылесос - рассадник для тараканов?</span>
-                            <svg class="ic" aria-hidden="true">
-                                <use xlink:href="imgs/ic.svg#plus"></use>
-                            </svg>
-                        </h3>
-                        <p class="main_faq__answer">
-                            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Гор
-                            маленький, курсивных над вершину рыбного буквоград всемогущая текст грустный.
-                        </p>
-                    </div>
-
-                    <img src="imgs/main/faq4.jpg" alt="i" loading="lazy" class="main_faq-img">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="main_benefit">
-        <div class="container main_benefit__inner">
-            <div class="main_benefit__content">
-                <h2 class="headline-title">
-                    Кому будут полезны системы встроенного централизованного пылеудаления AERTECNICA?
-                </h2>
-                <a href="#" class="btn btn--white btn--md md-hide">Получить консультацию</a>
-            </div>
-
-            <ul class="main_benefit__list">
-                <li>
-                    <img src="imgs/main/benefit/ic-1.svg" alt="i" class="ic" loading="lazy">
-                    <span class="main_benefit__title">
-                        Для частных домов <br>
-                        и элитных квартир
-                    </span>
-                    <span class="main_benefit__text">
-                        Больше не нужно таскать пылесос по этажам.
-                    </span>
-                </li>
-                <li>
-                    <img src="imgs/main/benefit/ic-2.svg" alt="i" class="ic" loading="lazy">
-                    <span class="main_benefit__title">
-                        Для архитекторов, <br> дизайнеров и элитных девелоперов
-                    </span>
-                    <span class="main_benefit__text">
-                        Убирается скрыто, не портит интерьер.
-                    </span>
-                </li>
-                <li>
-                    <img src="imgs/main/benefit/ic-3.svg" alt="i" class="ic" loading="lazy">
-                    <span class="main_benefit__title">
-                        Для отелей <br>
-                        и бизнесов
-                    </span>
-                    <span class="main_benefit__text">
-                        Экономит расходы на клининг.
-                    </span>
-                </li>
-            </ul>
-
-            <a href="#" class="btn btn--white btn--md md-show">Получить консультацию</a>
-        </div>
-    </section>
-
-    <section class="main_cunsolt --overflow">
-        <div class="container main_cunsolt__inner">
-            <div class="main_cunsolt__content">
-                <h2 class="main_cunsolt__title">Нужна консультация?</h2>
-                <p class="main_cunsolt__text">
-                    Ваш дом достоин премиальной чистоты – звоните! <a href="tel:88007750176">8 (800) 775-01-76</a>
-                </p>
-
-                <div class="main_cunsolt__socials">
-                    <a href="#" class="main_cunsolt__social --tg" aria-label="Telegram">
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#tg"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="main_cunsolt__social --max" aria-label="max">
-                        <img src="imgs/sprite/max.svg" class="ic" alt="max">
+        <section class="main_brands">
+            <div class="container">
+                <div class="headline headline--start">
+                    <h2 class="headline-title">
+                        <span class="headline-line">Наши клиенты:</span>
+                        от частных домов до <br> крупных корпораций
+                    </h2>
+                    <a href="#" class="btn btn--outline btn--lg">
+                        <span>Большой <b>опыт</b></span>
                     </a>
                 </div>
-            </div>
 
-            <form class="main_cunsolt__form">
-                <input type="text" required name="name" placeholder="Ваше имя">
-                <input type="email" required name="email" placeholder="Электронная почта">
-                <label class="inp_wrap">
-                    <select class="inp_wrap-child">
-                        <option>🇷🇺 +7</option>
-                        <option>🇰🇿 +7</option>
-                    </select>
-                    <input type="tel" name="phone" placeholder="(999) 999-99-99">
-                </label>
-                <div class="checkbox">
-                    <input type="checkbox" checked required>
-                    <label>Я даю согласие на обработку своих персональных данных</label>
-                </div>
-                <button type="submit" class="btn btn--primary btn--md">Получить консультацию</button>
-            </form>
-        </div>
-    </section>
+                <div class="main_brands__slider-wrap">
+                    <button class="slick-prev slick-arrow" aria-label="Next" type="button"></button>
 
-    <section class="main_objects">
-        <div class="container">
-            <h2 class="headline-title">У нас более 10 000 объектов, включая работы для звёзд шоу-бизнеса</h2>
+                    <div class="main_brands__slider">
+                        <div class="main_brands__slide">
+                            <img src="imgs/main/brand/brand-1.png" alt="Кварц">
+                        </div>
+                        <div class="main_brands__slide">
+                            <img src="imgs/main/brand/brand-2.png" alt="IKEA">
+                        </div>
+                        <div class="main_brands__slide">
+                            <img src="imgs/main/brand/brand-3.png"
+                                alt="Государственный музей изобразительных искусств им. А.С. Пушкина">
+                        </div>
+                        <div class="main_brands__slide">
+                            <img src="imgs/main/brand/brand-4.png" alt="Театральный центр Вишневый Сад">
+                        </div>
+                        <div class="main_brands__slide">
+                            <img src="imgs/main/brand/brand-5.png" alt="ROSCOSMOS">
+                        </div>
+                        <div class="main_brands__slide">
+                            <img src="imgs/main/brand/brand-2.png" alt="IKEA">
+                        </div>
+                    </div>
 
-            <div class="main_objects__slider">
-                <div class="obj">
-                    <img src="imgs/obj-1.jpg" alt="i" loading="lazy" class="obj__bg">
-                    <p class="obj__title">Нонна Гришаева: "Спасибо за потрясающий встроенный пылесос Aertecnica."</p>
-                </div>
-                <div class="obj">
-                    <img src="imgs/obj-2.jpg" alt="i" loading="lazy" class="obj__bg">
-                    <p class="obj__title">«Ремонт по-честному» на канале «РЕН ТВ» установила встроенный пылесос
-                        Aertecnica Tubo с системой Pratico в квартире Павла Прилучного.</p>
-                </div>
-                <div class="obj">
-                    <img src="imgs/obj-3.jpg" alt="i" loading="lazy" class="obj__bg">
-                    <p class="obj__title">Жилой комплекс на Нежинской</p>
-                </div>
-                <div class="obj">
-                    <img src="imgs/obj-3.jpg" alt="i" loading="lazy" class="obj__bg">
-                    <p class="obj__title">Жилой комплекс на Нежинской</p>
+                    <button class="slick-next slick-arrow" aria-label="Next" type="button"></button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="main_steps">
-        <div class="container">
-            <div class="headline">
-                <h2 class="headline-title">
-                    3 шага — и пыль
-                    <span class="headline-line">исчезнет навсегда:</span>
-                </h2>
-                <a href="#" class="btn btn--outline btn--lg">
-                    <span><b>консультация, <br> проект,</b> монтаж!</span>
-                </a>
+        <section class="main_articles">
+            <div class="container">
+                <div class="headline">
+                    <h2 class="headline-title">
+                        Следите за актуальными
+                        <span class="headline-line">скидками в новостях</span>
+                    </h2>
+                    <a href="#" class="btn btn--outline btn--lg">
+                        <span>Только <b>полезное</b></span>
+                    </a>
+                </div>
+
+                <div class="main_articles-list">
+                    <article class="main_articles__item">
+                        <img src="imgs/main/article-1.jpg" alt="Статья 1" loading="lazy" class="main_articles__img">
+
+                        <h3 class="main_articles__title">
+                            Представляем вашему вниманию новинку - новый умный робот-пылесос LASER Tubo Robo.
+                        </h3>
+                        <p class="main_articles__text">Новый умный робот-пылесос LASER Tubo Robo с комплектом
+                            инсталляции
+                            для подключения ко встроенному пылесосу!</p>
+
+                        <span class="main_articles__date">17.02.2025</span>
+                    </article>
+                    <article class="main_articles__item">
+                        <img src="imgs/main/article-2.jpg" alt="Статья 1" loading="lazy" class="main_articles__img">
+
+                        <h3 class="main_articles__title">
+                            Новая линейка оборудования уже в продаже!
+                        </h3>
+                        <p class="main_articles__text">
+                            Компания Aertecnica рада сообщить о поступлении в продажу новой серии оборудования TUBO
+                            DYNAMICA.
+                        </p>
+
+                        <span class="main_articles__date">15.02.2025</span>
+                    </article>
+                    <article class="main_articles__item">
+                        <img src="imgs/main/article-3.jpg" alt="Статья 1" loading="lazy" class="main_articles__img">
+
+                        <h3 class="main_articles__title">
+                            Семинар для архитекторов и проектировщиков в Москве 21 апреля!
+                        </h3>
+                        <p class="main_articles__text">
+                            21 апреля 2023 года компания Aertecnica проведет большой семинар под названием
+                            «Профессиональные
+                            центральные встроенные пылесосы. Проектирование и монтаж».
+                        </p>
+
+                        <span class="main_articles__date">15.01.2025</span>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <ol class="main_steps-list">
-                <li class="main_steps-item">
-                    <img src="imgs/main/steps3.jpg" alt="i" class="main_steps-img" loading="lazy">
+        <section class="full_form">
+            <div class="container">
+                <div class="full_form__content">
+                    <h2 class="headline-title">
+                        <b>Оставьте заявку</b> на монтаж,
+                        и мы с вами свяжемся
+                    </h2>
 
-                    <span class="main_steps-text">
-                        Получить консультацию, позвонив
-                        по бесплатному номеру <a href="tel:88007750176">8 (800) 775-01-76</a>
-                    </span>
-                </li>
-                <li class="main_steps-item">
-                    <img src="imgs/main/steps1.jpg" alt="i" class="main_steps-img" loading="lazy">
+                    <form class="full_form__form">
+                        <input type="text" required name="name" placeholder="Ваше имя">
+                        <label class="inp_wrap">
+                            <select class="inp_wrap-child">
+                                <option>🇷🇺 +7</option>
+                                <option>🇰🇿 +7</option>
+                            </select>
+                            <input type="tel" name="phone" placeholder="(999) 999-99-99">
+                        </label>
 
-                    <span class="main_steps-text">
-                        Заказать бесплатный проект системы централизованного пылеудаления
-                    </span>
-                </li>
-                <li class="main_steps-item">
-                    <img src="imgs/main/steps2.jpg" alt="i" class="main_steps-img" loading="lazy">
+                        <textarea name="" id="" placeholder="Укажите обькт - квартира\дом"></textarea>
 
-                    <span class="main_steps-content">
-                        <span class="main_steps-text">
-                            Заказать монтаж системы <br> централизованного пылеудаления
-                        </span>
-                        <a href="#" class="btn btn--primary btn--md">
-                            <span>Получить консультацию</span>
+                        <div class="atach">
+                            <span class="atach__title">Прикрепите чертеж</span>
+
+                            <div class="atach__wrap">
+                                <input class="atach__input" type="file" name="atach" id="atach">
+                                <label class="atach__label" for="atach">
+                                    <span class="atach__label-text">Выбрать</span>
+                                    <svg class="ic" aria-hidden="true">
+                                        <use xlink:href="imgs/ic.svg#plus"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="full_form__row">
+                            <div class="checkbox">
+                                <input type="checkbox" checked required>
+                                <label>Я даю согласие на обработку своих персональных данных</label>
+                            </div>
+                            <button type="submit" class="btn btn--orange btn--md">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="full_form__col">
+                    <div class="full_form__info">
+                        <span class="full_form__info-text"><b>Мы на связи</b> в любом <br> удобном мессенджере</span>
+                        <a href="#" class="full_form__social --tg" aria-label="Telegram">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#tg"></use>
+                            </svg>
                         </a>
-                    </span>
-                </li>
-            </ol>
-        </div>
-    </section>
+                        <a href="#" class="full_form__social --max" aria-label="max">
+                            <img src="imgs/sprite/max.svg" class="ic" alt="max">
+                        </a>
+                    </div>
 
-    <section class="main_aertecnica">
-        <div class="container">
-            <h2 class="headline-title">Aertecnica в цифрах</h2>
-
-            <ul class="main_aertecnica__list">
-                <li class="aertecnica-stat">
-                    <span class="aertecnica-stat__text">
-                        <span class="aertecnica-stat__num">100+</span>
-                        Представительства более чем в 100 странах мира.
-                    </span>
-                    <img class="aertecnica-stat__icon" src="imgs/main/aertecnica_ic-1.svg" alt="i" loading="lazy">
-                </li>
-
-                <li class="aertecnica-stat">
-                    <span class="aertecnica-stat__text">
-                        <span class="aertecnica-stat__num">40 лет</span>
-                        Опыт в создании встроенных пылесосов премиум-класса.
-                    </span>
-                    <img class="aertecnica-stat__icon" src="imgs/main/aertecnica_ic-2.svg" alt="i" loading="lazy">
-                </li>
-
-                <li class="aertecnica-stat">
-                    <span class="aertecnica-stat__text">
-                        <span class="aertecnica-stat__num">10 000+</span>
-                        Довольных клиентов в России и странах Таможенного Союза.
-                    </span>
-                    <img class="aertecnica-stat__icon" src="imgs/main/aertecnica_ic-3.svg" alt="i" loading="lazy">
-                </li>
-
-                <li class="aertecnica-stat">
-                    <span class="aertecnica-stat__text">
-                        <span class="aertecnica-stat__num">2000 год</span>
-                        Открытие официального представительства Aertecnica в России.
-                    </span>
-                    <img class="aertecnica-stat__icon" src="imgs/main/aertecnica_ic-4.svg" alt="i" loading="lazy">
-                </li>
-            </ul>
-
-            <div class="main_aertecnica__cta">
-                <p class="main_aertecnica__cta-text">Ещё один встроенный пылесос Aertecnica может появиться у вас дома.
-                </p>
-                <a href="#" class="btn btn--blue btn--md">Заказать AERTECNICA</a>
-                <img class="main_aertecnica__arrow" src="imgs/main/decor-arrow.svg" alt="i">
-            </div>
-        </div>
-    </section>
-
-    <section class="main_why">
-        <div class="container">
-            <h2 class="headline-title">
-                Почему встроенные пылесосы Aertecnica покупают у нас?
-            </h2>
-
-            <ul class="main_why__list">
-                <li>
-                    <span class="main_why__heading">Официальное представительство в России</span>
-                    <span class="main_why__text">Вы существенно экономите покупая без посредников.</span>
-                    <img src="imgs/main/why/1.svg" alt="i" loading="lazy">
-                    <span class="main_why__chip">Факт 1</span>
-                </li>
-                <li>
-                    <span class="main_why__heading">Собственный склад</span>
-                    <span class="main_why__text">Всегда в наличии техника и комплектующие.</span>
-                    <img src="imgs/main/why/2.svg" alt="i" loading="lazy">
-                    <span class="main_why__chip">Факт 2</span>
-                </li>
-                <li>
-                    <span class="main_why__heading">Доставка по всей стране</span>
-                    <span class="main_why__text">Быстро отправляем в любой регион</span>
-                    <img src="imgs/main/why/3.svg" alt="i" loading="lazy">
-                    <span class="main_why__chip">Факт 3</span>
-                </li>
-                <li>
-                    <span class="main_why__heading">Сертифицированный монтаж</span>
-                    <span class="main_why__text">Устанавливаем системы «под ключ» собственными бригадами.</span>
-                    <img src="imgs/main/why/4.svg" alt="i" loading="lazy">
-                    <span class="main_why__chip">Факт 4</span>
-                </li>
-                <li>
-                    <span class="main_why__heading">Проектирование от специалистов Aertecnica</span>
-                    <span class="main_why__text">Наши инженеры прошли обучение на заводе в Италии.</span>
-                    <img src="imgs/main/why/5.svg" alt="i" loading="lazy">
-                    <span class="main_why__chip">Факт 5</span>
-                </li>
-                <li>
-                    <span class="main_why__heading">Бесплатный проект системы</span>
-                    <span class="main_why__text">Рассчитаем оптимальное решение именно для вашего объекта.</span>
-                    <img src="imgs/main/why/6.svg" alt="i" loading="lazy">
-                    <span class="main_why__chip">Факт 6</span>
-                </li>
-            </ul>
-
-            <div class="main_why__row">
-                <div class="main_why__item">
-                    <h3 class="main_why__item-heading">Официальная гарантия и сервис</h3>
-                    <p class="main_why__text">Поддержка в течение всего срока службы.</p>
-                    <img src="imgs/main/why/8.svg" alt="i" loading="lazy" class="main_why__item-icon">
-                </div>
-                <div class="main_why__info">
-                    <h3 class="main_why__info-heading">
-                        Хочешь получить встроенный пылесос Aertecnica <span>бесплатно</span>?
-                    </h3>
-                    <a href="#" class="btn btn--blue btn--md">Жми кнопку</a>
-                    <img src="imgs/main/decor-arrow.svg" alt="i" loading="lazy" class="main_why__info-decor">
+                    <img src="imgs/full_form/form_el.png" class="full_form__img" alt="i" loading="lazy">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section class="main_brands">
+    <footer class="site-footer">
         <div class="container">
-            <div class="headline headline--start">
-                <h2 class="headline-title">
-                    <span class="headline-line">Наши клиенты:</span>
-                    от частных домов до <br> крупных корпораций
-                </h2>
-                <a href="#" class="btn btn--outline btn--lg">
-                    <span>Большой <b>опыт</b></span>
-                </a>
-            </div>
-
-            <div class="main_brands__slider-wrap">
-                <button class="slick-prev slick-arrow" aria-label="Next" type="button"></button>
-
-                <div class="main_brands__slider">
-                    <div class="main_brands__slide">
-                        <img src="imgs/main/brand/brand-1.png" alt="Кварц">
-                    </div>
-                    <div class="main_brands__slide">
-                        <img src="imgs/main/brand/brand-2.png" alt="IKEA">
-                    </div>
-                    <div class="main_brands__slide">
-                        <img src="imgs/main/brand/brand-3.png"
-                            alt="Государственный музей изобразительных искусств им. А.С. Пушкина">
-                    </div>
-                    <div class="main_brands__slide">
-                        <img src="imgs/main/brand/brand-4.png" alt="Театральный центр Вишневый Сад">
-                    </div>
-                    <div class="main_brands__slide">
-                        <img src="imgs/main/brand/brand-5.png" alt="ROSCOSMOS">
-                    </div>
-                    <div class="main_brands__slide">
-                        <img src="imgs/main/brand/brand-2.png" alt="IKEA">
-                    </div>
+            <div class="footer-top">
+                <div class="footer-col footer-col-logo">
+                    <a href="/" class="footer-logo">
+                        <img src="imgs/logo.svg" alt="i" loading="lazy">
+                    </a>
                 </div>
 
-                <button class="slick-next slick-arrow" aria-label="Next" type="button"></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="main_articles">
-        <div class="container">
-            <div class="headline">
-                <h2 class="headline-title">
-                    Следите за актуальными
-                    <span class="headline-line">скидками в новостях</span>
-                </h2>
-                <a href="#" class="btn btn--outline btn--lg">
-                    <span>Только <b>полезное</b></span>
-                </a>
-            </div>
-
-            <div class="main_articles-list">
-                <article class="main_articles__item">
-                    <img src="imgs/main/article-1.jpg" alt="Статья 1" loading="lazy" class="main_articles__img">
-
-                    <h3 class="main_articles__title">
-                        Представляем вашему вниманию новинку - новый умный робот-пылесос LASER Tubo Robo.
-                    </h3>
-                    <p class="main_articles__text">Новый умный робот-пылесос LASER Tubo Robo с комплектом инсталляции
-                        для подключения ко встроенному пылесосу!</p>
-
-                    <span class="main_articles__date">17.02.2025</span>
-                </article>
-                <article class="main_articles__item">
-                    <img src="imgs/main/article-2.jpg" alt="Статья 1" loading="lazy" class="main_articles__img">
-
-                    <h3 class="main_articles__title">
-                        Новая линейка оборудования уже в продаже!
-                    </h3>
-                    <p class="main_articles__text">
-                        Компания Aertecnica рада сообщить о поступлении в продажу новой серии оборудования TUBO
-                        DYNAMICA.
-                    </p>
-
-                    <span class="main_articles__date">15.02.2025</span>
-                </article>
-                <article class="main_articles__item">
-                    <img src="imgs/main/article-3.jpg" alt="Статья 1" loading="lazy" class="main_articles__img">
-
-                    <h3 class="main_articles__title">
-                        Семинар для архитекторов и проектировщиков в Москве 21 апреля!
-                    </h3>
-                    <p class="main_articles__text">
-                        21 апреля 2023 года компания Aertecnica проведет большой семинар под названием «Профессиональные
-                        центральные встроенные пылесосы. Проектирование и монтаж».
-                    </p>
-
-                    <span class="main_articles__date">15.01.2025</span>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="full_form">
-        <div class="container">
-            <div class="full_form__content">
-                <h2 class="headline-title">
-                    <b>Оставьте заявку</b> на монтаж,
-                    и мы с вами свяжемся
-                </h2>
-
-                <form class="full_form__form">
-                    <input type="text" required name="name" placeholder="Ваше имя">
-                    <label class="inp_wrap">
-                        <select class="inp_wrap-child">
-                            <option>🇷🇺 +7</option>
-                            <option>🇰🇿 +7</option>
-                        </select>
-                        <input type="tel" name="phone" placeholder="(999) 999-99-99">
-                    </label>
-
-                    <textarea name="" id="" placeholder="Укажите обькт - квартира\дом"></textarea>
-
-                    <div class="atach">
-                        <span class="atach__title">Прикрепите чертеж</span>
-
-                        <div class="atach__wrap">
-                            <input class="atach__input" type="file" name="atach" id="atach">
-                            <label class="atach__label" for="atach">
-                                <span class="atach__label-text">Выбрать</span>
+                <div class="footer-col footer-col-contacts" style="align-items: center;">
+                    <div class="foo-cont">
+                        <span class="footer-contact-line">
+                            <a class="footer-contact-line" href="tel:+79309778929">
                                 <svg class="ic" aria-hidden="true">
-                                    <use xlink:href="imgs/ic.svg#plus"></use>
+                                    <use xlink:href="imgs/ic.svg#phone"></use>
                                 </svg>
-                            </label>
-                        </div>
-                    </div>
+                                <span class="footer-contact-text">+7 930-977-89-29</span>
+                            </a>
 
-                    <div class="full_form__row">
-                        <div class="checkbox">
-                            <input type="checkbox" checked required>
-                            <label>Я даю согласие на обработку своих персональных данных</label>
-                        </div>
-                        <button type="submit" class="btn btn--orange btn--md">Отправить</button>
+                            <span class="footer-contact-msgs">
+                                <a href="#" aria-hidden="true">
+                                    <svg class="ic" aria-hidden="true">
+                                        <use xlink:href="imgs/ic.svg#tg"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" aria-hidden="true">
+                                    <img src="imgs/sprite/max.svg" alt="i" loading="lazy">
+                                </a>
+                            </span>
+                        </span>
+                        <a class="footer-contact-line" href="tel:+78007750176">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#phone"></use>
+                            </svg>
+                            <span class="footer-contact-text">8 800-775-01-76</span>
+                        </a>
+                        <a class="footer-contact-line" href="mailto:info@aertecnica-tubo.ru">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#email"></use>
+                            </svg>
+                            <span class="footer-contact-text">info@aertecnica-tubo.ru</span>
+                        </a>
                     </div>
-                </form>
-            </div>
-
-            <div class="full_form__col">
-                <div class="full_form__info">
-                    <span class="full_form__info-text"><b>Мы на связи</b> в любом <br> удобном мессенджере</span>
-                    <a href="#" class="full_form__social --tg" aria-label="Telegram">
-                        <svg class="ic" aria-hidden="true">
-                            <use xlink:href="imgs/ic.svg#tg"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="full_form__social --max" aria-label="max">
-                        <img src="imgs/sprite/max.svg" class="ic" alt="max">
-                    </a>
                 </div>
 
-                <img src="imgs/full_form/form_el.png" class="full_form__img" alt="i" loading="lazy">
+                <div class="footer-col footer-col-work">
+                    <p class="footer-work-text">Режим работы: Официального Представительства Aertecnica в России и
+                        странах Таможенного Союза: ПН-ПТ с 10.00 до 20.00, сб,вс по предварительной договоренности</p>
+                    <div class="socials" aria-label="Социальные сети">
+                        <a class="social" href="#" aria-label="Одноклассники">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#ok"></use>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#fb"></use>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#tok"></use>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#pint"></use>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="RuTube">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#rt"></use>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="ВКонтакте">
+                            <svg class="ic" aria-hidden="true">
+                                <use xlink:href="imgs/ic.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-col-region">
+                    <div class="footer-region-head">
+                        <span class="footer-region-label">Ваш регион:</span>
+                        <details class="footer-region-dropdown">
+                            <summary class="footer-region-toggle" tabindex="0">Москва</summary>
+                            <ul class="footer-region-menu">
+                                <li><a class="footer-region-menu__link" href="index.php?region=msk"
+                                        aria-current="page">Москва</a></li>
+                                <li><a class="footer-region-menu__link" href="index.php?region=spb">Санкт-Петербург</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </div>
+                    <p class="footer-address">Наш адрес: Московская область, Новорижское шоссе, 9км от МКАД,
+                        Строительный Двор «Петровский» (пав. Ж 11)</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy;&nbsp;Aertecnica — <a href="#">встроенные пылесосы</a>, и <a
+                        href="#">системы центрального пылеудаления</a> 2010–2025</p>
+                <a class="footer-privacy" href="#">Политика конфиденциальности</a>
             </div>
         </div>
-    </section>
+    </footer>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

@@ -58,6 +58,9 @@
     cursor: pointer
     text-decoration: none
     transition: all 0.3s ease
+    &:hover 
+        opacity: 1
+
     &:active
         transform: scale(.98)
 
@@ -123,7 +126,7 @@
         background: linear-gradient(0deg, #FB4310 0%, #FF6C44 100%)
         color: #fff
         &::before
-            opacity: .5
+            opacity: .4
 
         &:hover
             opacity: .8
@@ -278,6 +281,12 @@ section
     @extend %flex-ac
     @extend %flex-wrap
     @extend %flex-jb
+    gap: 12px
+    &__title
+        font-size: 20px
+        font-weight: 500
+        line-height: 140% 
+
     &__input
         display: none
 
@@ -308,7 +317,7 @@ section
             background-color: var(--color-accent, #105bfb)
             color: #FFF
             border-color: var(--color-accent, #105bfb)
-            .ic 
+            .ic
                 transform: rotate(45deg)
 
     .ic
