@@ -12,7 +12,6 @@
 <body>
     <header class="site-header" id="site-header">
         <div class="container">
-            <!-- Десктоп: faq.png -->
             <div class="header-desktop">
                 <div class="header-top">
                     <a class="brand" href="/">
@@ -59,7 +58,7 @@
                         <a href="#">Монтаж</a>
                         <a href="#">Наши работы</a>
                         <div class="top-dop-menu__wrap">
-                            <a href="#" class="top-dop-menu-a" style="font-weight: 700;"><span class="main-nav-arrow">›
+                            <a href="#" class="top-dop-menu-a"><span class="main-nav-arrow">›
                                 </span> Меню</a>
                             <ul class="top-dop-menu">
                                 <li><a href="#">О компании</a></li>
@@ -225,7 +224,6 @@
                 </div>
             </div>
 
-            <!-- Мобильный: faq-mob.png -->
             <div class="header-mobile">
                 <div class="header-mobile-bar header-mobile-bar--contacts">
                     <a class="header-mobile-phone" href="tel:+79309778929">
@@ -282,7 +280,6 @@
             </div>
         </div>
 
-        <!-- Десктоп: menu-catalog.png -->
         <div class="catalog-mega" id="catalog-mega">
             <div class="container catalog-mega__inner">
                 <div class="catF">
@@ -326,17 +323,30 @@
             </div>
         </div>
 
-
-        <!-- Мобилка: menu-mob.png -->
         <div class="mobile-drawer mobile-drawer--nav" id="mobile-nav-drawer">
-            <div class="header-mobile-catalog-wrap megaCat">
-                <button class="catalog-btn catalog-btn--mobile" type="button" id="mobile-catalog-toggle">
-                    <span class="catalog-btn-burger"></span>
-                    <span class="catalog-btn-text">Каталог</span>
-                    <span class="catalog-btn-arrow">›</span>
-                </button>
+            <div class="mobile-drawer__scroll">
+                <p class="mobile-drawer__section-title"><span>›</span> Меню</p>
+                <nav class="mobile-nav-list">
+                    <a class="mobile-nav-list__link" href="#">О компании</a>
+                    <a class="mobile-nav-list__link" href="#">Акции</a>
+                    <a class="mobile-nav-list__link" href="#">Технологии</a>
+                    <a class="mobile-nav-list__link" href="#">Новости</a>
+                    <a class="mobile-nav-list__link" href="faq.php">FAQ</a>
+                    <a class="mobile-nav-list__link" href="#">Доставка</a>
+                    <a class="mobile-nav-list__link" href="#">Контакты</a>
+                </nav>
             </div>
+        </div>
 
+        <div class="header-mobile-catalog-wrap megaCat">
+            <button class="catalog-btn catalog-btn--mobile" type="button" id="mobile-catalog-toggle">
+                <svg class="ic" aria-hidden="true">
+                    <use xlink:href="imgs/ic.svg#burger"></use>
+                </svg>
+                <span class="catalog-btn-text">Каталог</span>
+                <span class="catalog-btn-arrow">›</span>
+            </button>
+            
             <div class="mobile-catalog-panel catBody">
                 <div class="mobile-catalog-panel__body">
                     <details class="mobile-catalog-acc">
@@ -370,22 +380,28 @@
                     </details>
                 </div>
             </div>
-            <div class="mobile-drawer__scroll">
-                <p class="mobile-drawer__section-title"><span>›</span> Меню</p>
-                <nav class="mobile-nav-list">
-                    <a class="mobile-nav-list__link" href="#">О компании</a>
-                    <a class="mobile-nav-list__link" href="#">Акции</a>
-                    <a class="mobile-nav-list__link" href="#">Технологии</a>
-                    <a class="mobile-nav-list__link" href="#">Новости</a>
-                    <a class="mobile-nav-list__link" href="faq.php">FAQ</a>
-                    <a class="mobile-nav-list__link" href="#">Доставка</a>
-                    <a class="mobile-nav-list__link" href="#">Контакты</a>
-                </nav>
-            </div>
         </div>
+
     </header>
 
     <main>
+        <section class="main_hero">
+            <div class="container main_hero__inner">
+                <div class="main_hero-left">
+                    <picture>
+                        <source media="(min-width: 1001px)" srcset="imgs/main/hero/1.jpg">
+                        <img src="imgs/main/hero/1-mob.jpg" alt="1">
+                    </picture>
+                </div>
+
+                <div class="main_hero-right">
+                    <picture>
+                        <img src="imgs/main/hero/2.jpg" alt="2">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
         <section class="hits">
             <div class="container hits__inner">
                 <div class="headline">

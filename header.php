@@ -11,7 +11,6 @@
 <body>
     <header class="site-header" id="site-header">
         <div class="container">
-            <!-- Десктоп: faq.png -->
             <div class="header-desktop">
                 <div class="header-top">
                     <a class="brand" href="/">
@@ -57,17 +56,19 @@
                         <a href="#">Проект</a>
                         <a href="#">Монтаж</a>
                         <a href="#">Наши работы</a>
-                        <a href="#" class="top-dop-menu-a" style="font-weight: 700;"><span class="main-nav-arrow">›
-                            </span> Меню</a>
-                        <ul class="top-dop-menu">
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Акции</a></li>
-                            <li><a href="#">Технологии</a></li>
-                            <li><a href="#">Новости</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Доставка</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
+                        <div class="top-dop-menu__wrap">
+                            <a href="#" class="top-dop-menu-a"><span class="main-nav-arrow">›
+                                </span> Меню</a>
+                            <ul class="top-dop-menu">
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Акции</a></li>
+                                <li><a href="#">Технологии</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
                     </nav>
                     <div class="header-location" title="Адрес">
                         <svg class="ic" aria-hidden="true">
@@ -222,7 +223,6 @@
                 </div>
             </div>
 
-            <!-- Мобильный: faq-mob.png -->
             <div class="header-mobile">
                 <div class="header-mobile-bar header-mobile-bar--contacts">
                     <a class="header-mobile-phone" href="tel:+79309778929">
@@ -279,7 +279,6 @@
             </div>
         </div>
 
-        <!-- Десктоп: menu-catalog.png -->
         <div class="catalog-mega" id="catalog-mega">
             <div class="container catalog-mega__inner">
                 <div class="catF">
