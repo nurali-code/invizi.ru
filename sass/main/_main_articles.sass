@@ -8,7 +8,7 @@
 
     &__item
         @extend %flex-col
-        gap: 12px
+        gap: 10px
         &:last-child
             width: 100%
             .main_articles__img
@@ -17,9 +17,11 @@
     &__img
         width: 100%
         border-radius: 10px
+        margin-bottom: 5px
         aspect-ratio: 700/370
 
     &__date
+        margin-top: 5px
         padding: 2px 12px
         display: block
         width: fit-content
@@ -48,8 +50,15 @@
             display: inline
             &::after
                 display: none
-        &__list 
+
+        &__list
             --gap: 16px
 
         &__img
             aspect-ratio: 343 / 182 !important
+
+        &__title
+            font-size: 18px
+
+        &__text
+            font-size: 16px

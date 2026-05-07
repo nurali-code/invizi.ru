@@ -806,6 +806,68 @@
         </div>
     </section>
 
+    <section class="full_form">
+        <div class="container">
+            <div class="full_form__content">
+                <h2 class="headline-title">
+                    <b>Оставьте заявку</b> на монтаж,
+                    и мы с вами свяжемся
+                </h2>
+
+                <form class="full_form__form">
+                    <input type="text" required name="name" placeholder="Ваше имя">
+                    <label class="inp_wrap">
+                        <select class="inp_wrap-child">
+                            <option>🇷🇺 +7</option>
+                            <option>🇰🇿 +7</option>
+                        </select>
+                        <input type="tel" name="phone" placeholder="(999) 999-99-99">
+                    </label>
+
+                    <textarea name="" id="" placeholder="Укажите обькт - квартира\дом"></textarea>
+
+                    <div class="atach">
+                        <span class="atach__title">Прикрепите чертеж</span>
+
+                        <div class="atach__wrap">
+                            <input class="atach__input" type="file" name="atach" id="atach">
+                            <label class="atach__label" for="atach">
+                                <span class="atach__label-text">Выбрать</span>
+                                <svg class="ic" aria-hidden="true">
+                                    <use xlink:href="imgs/ic.svg#plus"></use>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="full_form__row">
+                        <div class="checkbox">
+                            <input type="checkbox" checked required>
+                            <label>Я даю согласие на обработку своих персональных данных</label>
+                        </div>
+                        <button type="submit" class="btn btn--orange btn--md">Отправить</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="full_form__col">
+                <div class="full_form__info">
+                    <span class="full_form__info-text"><b>Мы на связи</b> в любом <br> удобном мессенджере</span>
+                    <a href="#" class="full_form__social --tg" aria-label="Telegram">
+                        <svg class="ic" aria-hidden="true">
+                            <use xlink:href="imgs/ic.svg#tg"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="full_form__social --max" aria-label="max">
+                        <img src="imgs/sprite/max.svg" class="ic" alt="max">
+                    </a>
+                </div>
+
+                <img src="imgs/full_form/form_el.png" class="full_form__img" alt="i" loading="lazy">
+            </div>
+        </div>
+    </section>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>

@@ -79,4 +79,19 @@ $(function () {
             $icon.css('transform', 'rotate(45deg)');
         }
     });
+
+    // File input functionality
+    $('#atach').on('change', function () {
+        const fileName = $(this).val().split('\\').pop();
+        const $label = $(this).siblings('.atach__label');
+        const $labelText = $label.find('.atach__label-text');
+        
+        if (fileName) {
+            $labelText.text(fileName);
+            $label.addClass('--selected');
+        } else {
+            $labelText.text('Выбрать');
+            $label.removeClass('--selected');
+        }
+    });
 });

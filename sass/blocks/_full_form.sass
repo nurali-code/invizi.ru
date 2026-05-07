@@ -1,0 +1,175 @@
+.full_form
+    background-color: #0C43B9
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: cover
+    background-image: url('../imgs/full_form/full_form__bg.svg')
+    padding: 0
+    color: white
+    margin-top: var(--section-pad-y)
+
+    .container
+        @extend %flex
+
+    .headline-title
+        color: white
+        font-weight: normal
+        margin-bottom: 56px
+
+    &__content
+        max-width: 63%
+        padding: calc( var(--section-pad-y) * 2 ) 0
+
+    &__form
+        @extend %flex-col
+        gap: 20px
+        max-width: 480px
+        .btn
+            min-width: 230px !important
+            width: fit-content
+
+    &__row
+        gap: 10px
+        @extend %flex-ac
+
+    &__col
+        width: 37%
+        position: relative
+        z-index: 0
+
+    &__img
+        position: absolute
+        bottom: 0
+        right: 0
+        z-index: 1
+        width: 100%
+        height: 90%
+        object-fit: contain
+        object-position: bottom center
+        margin-left: auto
+
+    &__info
+        width: 489px
+        min-height: 103px
+        padding: 10px 25px
+        color: #0A2540
+        position: absolute
+        z-index: 111
+        bottom: 20%
+        right: 45%
+        @extend %flex-wrap
+        @extend %flex-ac
+        gap: 14px
+        background-repeat: no-repeat
+        background-position: right center
+        background-size: contain
+        background-image: url('../imgs/full_form/info__bg.svg')
+
+        filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.25))
+
+        .ic
+            --size: 48px
+
+        &-text
+            font-size: 24px
+            font-style: normal
+            font-weight: 400
+            line-height: 120%
+            margin-right: 4px
+
+    @media screen and ( max-width: 1300px ) and ( min-width: 1001px )
+        &__info
+            padding: 20px 22px
+            width: 280px
+            aspect-ratio: 254 / 131
+            min-height: unset
+            right: auto
+            left: -25%
+            background-image: url('../imgs/full_form/info__bg-mob.svg')
+            &-text
+                font-size: 20px
+                display: block
+                width: 100%
+                margin: 0
+
+                .ic
+                    --size: 49px
+
+    @media screen and ( max-width: 1000px )
+        background-position: bottom right
+        background-size: auto 50%
+        background-image: url('../imgs/full_form/full_form__bg-mob.svg')
+        padding: var(--section-pad-y) 0 0
+
+        .container
+            display: block
+
+        &__content
+            display: block
+            max-width: 100%
+            padding: 0
+
+        &__form
+            max-width: 60%
+
+        &__col
+            margin-top: -240px
+            width: 100%
+            max-width: 100%
+            margin-left: auto
+
+        &__img
+            max-width: 60%
+            width: auto
+            height: 530px
+            position: static
+
+        &__info
+            left: auto
+            right: 20%
+
+    @media screen and ( max-width: 700px )
+        background-size: 138% auto
+        .headline-title
+            margin-bottom: 24px
+
+        &__info
+            right: auto
+            left: 0
+            gap: 7px
+            padding: 18px 22px 10px
+            width: 240px
+            aspect-ratio: 254 / 131
+            min-height: unset
+            background-image: url('../imgs/full_form/info__bg-mob.svg')
+            &-text
+                font-size: 16px
+                display: block
+                width: 100%
+                margin: 0
+
+                .ic
+                    --size: 49px
+
+            a
+                &:last-child
+                    margin-left: 6px
+
+        &__img
+            height: 394px
+
+        &__content
+            margin-bottom: 45px
+
+        &__row
+            flex-direction: column
+
+        &__form
+            max-width: 100%
+
+        .btn
+            width: 100%
+
+        &__col
+            max-width: 354px
+            margin: 0 auto
